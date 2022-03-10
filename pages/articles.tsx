@@ -24,6 +24,17 @@ const Article: NextPage = () => {
                         <CardArticle article={article} key={article.id} />
                     ))
                     }
+                    <div className="mx-auto flex md:mt-[84px] md:mb-[215px]">
+                        <button className="rounded-full border border-solid border-gray2 text-gray4 inline-flex items-center justify-center font-bold text-[22px] py-[28px] md:w-[310px] mx-auto">
+
+                            <span className="inline-block mr-[13px]">Load more</span>
+                            <svg width="16" height="16" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.8887 15.7596L15.2491 2.17631L1.66576 5.81595M15.2491 2.17631L2.75098 23.8237L15.2491 2.17631Z" stroke="#666666" strokeWidth="2" strokeLinecap="square" />
+                            </svg>
+
+                        </button>
+
+                    </div>
                 </section>
             </main>
 
