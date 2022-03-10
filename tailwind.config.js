@@ -5,6 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        dark: "#111111",
+        gray5: "#555555",
+        gray3: "#999999",
+      },
       backgroundImage: {
         "hero-article": "url('/img/ejiro-banner.png')",
       },

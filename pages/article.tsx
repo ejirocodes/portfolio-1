@@ -1,5 +1,7 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
+import CardArticle from '../components/CardArticle'
+import { articles } from '../data/article'
 
 const Article: NextPage = () => {
     return (
@@ -17,7 +19,12 @@ const Article: NextPage = () => {
                 </div>
             </header>
             <main className="h-screen">
-
+                <section>
+                    {articles.map((article) => (
+                        <CardArticle article={article} key={article.id} />
+                    ))
+                    }
+                </section>
             </main>
 
         </>
