@@ -6,7 +6,7 @@ const CardArticle: React.FC<Article> = ({ article }) => {
     console.log(article.title)
     return (
         // md:group-hover:opacity-50 md:hover:scale-x-50 md:hover:opacity-important
-        <article className="bg-[#FBFBFB] w-full pt-[70px] pb-[55px] transition min-h-inherit md:group-hover:opacity-50 md:hover:scale-[1.04] hover:shadow-sm  md:hover:opacity mb-[30px]"
+        <article className="bg-[#FBFBFB] cursor-grab w-full pt-[70px] pb-[55px] transition min-h-inherit md:group-hover:opacity-50 md:hover:scale-[1.04] hover:shadow-sm  md:hover:opacity mb-[30px]"
             itemType="http://schema.org/CreativeWork"
         >
             <div className="">
