@@ -10,10 +10,6 @@ export const NavMain = () => {
       url: "/",
     },
     {
-      title: "About me",
-      url: "/about",
-    },
-    {
       title: "Articles",
       url: "/articles",
     },

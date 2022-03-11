@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #111111;
+}
+
 @font-face {
   font-family: "Tomato";
   src: url("../assets/fonts/TomatoGrotesk-Regular.otf");
@@ -99,4 +103,20 @@
 .btn1O:hover::after {
   opacity: 1;
   width: 120%;
+}
+.react-tabs__tab,
+.react-tabs__tab--selected {
+  background: transparent !important;
+  border-color: transparent !important;
+  border-radius: 0 !important;
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  color: #cccccc !important;
+  transition: all 0.3s ease-in-out;
+}
+.react-tabs__tab--selected {
+  color: var(--primary) !important;
+}
+.react-tabs__tab:not(:nth-last-of-type(1)) {
+  margin-right: 180px !important;
 }

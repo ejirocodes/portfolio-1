@@ -1,11 +1,12 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import Newsletter from "../components/article/Newsletter";
 
 const Work = () => {
   return (
     <section className="pt-[172px]">
-      <header className="text-center text-dark pb-[48px]">
+      <header className="text-center text-dark pb-[48px] ">
         <h1 className="text-[60px] leading-none mb-[12px] font-extrabold">
           /Work
         </h1>
@@ -16,11 +17,13 @@ const Work = () => {
       </header>
       <section>
         <Tabs>
-          <TabList>
-            <Tab>All</Tab>
-            <Tab>Projects</Tab>
-            <Tab>Open Source</Tab>
-          </TabList>
+          <div className="border-t border-gray3 py-[40px] border-b text-center">
+            <TabList className="tabs_main_list">
+              <Tab>All</Tab>
+              <Tab>Projects</Tab>
+              <Tab>Open Source</Tab>
+            </TabList>
+          </div>
 
           <TabPanel>
             <h2>Any content 1</h2>
@@ -33,6 +36,7 @@ const Work = () => {
           </TabPanel>
         </Tabs>
       </section>
+      <Newsletter />
     </section>
   );
 };
