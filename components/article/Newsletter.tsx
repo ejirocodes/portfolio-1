@@ -1,17 +1,18 @@
 const Newsletter = () => {
   return (
     <section className="bg-[#FBFBFB] text-center px-[180px] pt-[105px] pb-[121px]">
-      <h1 className="mb-[14px] text-dark text-[37px] leading-[48px] font-bold ">
+      <h1 className="mb-[19px] text-dark text-[42px] leading-[48px] font-bold ">
         Ejiro Asiuhwu&apos;s Newsletter
       </h1>
-      <p className="md:mb-[74px]">
-        A monthly newsletter where I share resources around Tech, Career and
-        Lifestyle.
+      <p className="md:mb-[57px] text-gray5 text-[22px] leading-[35px]">
+        A monthly newsletter where I share resources around Tech,
+        <br />
+        Career and Lifestyle. No spam, unsubscribe at any time.
       </p>
-      <div className="flex items-center justify-center h-[105px] mb-[73px]">
+      <div className="flex items-center justify-center h-[87px] md:mb-[60px]">
         <input
           type="text"
-          className="w-full h-full border border-solid border-r-0 border-gray3 pl-[47px]"
+          className="w-full placeholder:text-gray5 h-full border border-solid border-r-0 border-gray2 pl-[40px]"
           placeholder="Your email address..."
         />
         <button className="bg-dark h-full w-[102px] flex items-center justify-center">
@@ -31,7 +32,7 @@ const Newsletter = () => {
           </svg>
         </button>
       </div>
-      <p>
+      <p className="text-gray5 font-[20px]">
         By subscribing, you agree with Revue’s Terms of Service and Privacy
         Policy.
       </p>

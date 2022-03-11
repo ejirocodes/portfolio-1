@@ -82,7 +82,7 @@ export const NavMain = () => {
                     className={
                       router.asPath === navigation.url
                         ? "active-link"
-                        : "text-dark border-r border-r-gray3 h-full w-[177px] flex items-center justify-center font-['NeueMachina'] hover:bg-white hover:text-dark transition ease-in-out duration-300 "
+                        : "text-dark border-r border-r-gray3 h-full w-[177px] flex items-center justify-center font-['NeueMachina'] hover:bg-[#FBFBFB] hover:text-dark transition ease-in-out duration-300 "
                     }
                   >
                     {navigation.title}

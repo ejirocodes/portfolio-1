@@ -1,8 +1,12 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import Newsletter from "../components/article/newsletter";
+import Newsletter from "../components/article/Newsletter";
 import CardArticle from "../components/CardArticle";
 import { articles } from "../data/article";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+// gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const Article: NextPage = () => {
   return (
@@ -14,6 +18,7 @@ const Article: NextPage = () => {
           content="Articles, content, post and  writings by Ejiro Asiuwhu"
         />
       </Head>
+      <progress max="100" value="20"></progress>
 
       <header className="bg-hero-article md:h-[590px] w-full h-[70vh] bg-cover bg-top flex items-center justify-center">
         <div className="text-center text-white ">
@@ -29,18 +34,18 @@ const Article: NextPage = () => {
             <CardArticle article={article} key={article.id} />
           ))}
           <div className="mx-auto flex md:mt-[84px] md:mb-[215px]">
-            <button className="rounded-full border border-solid border-gray2 text-gray4 inline-flex items-center justify-center font-bold text-[22px] py-[28px] md:w-[310px] mx-auto">
-              <span className="inline-block mr-[13px]">Load more</span>
+            <button className="border border-solid border-gray2 text-gray3 inline-flex items-center justify-center font-bold text-[22px] py-[28px] md:w-[310px] mx-auto">
+              <span className="inline-block mr-[13px]">See more articles</span>
               <svg
                 width="16"
-                height="16"
-                viewBox="0 0 21 25"
+                height="10"
+                viewBox="0 0 16 10"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M18.8887 15.7596L15.2491 2.17631L1.66576 5.81595M15.2491 2.17631L2.75098 23.8237L15.2491 2.17631Z"
-                  stroke="#666666"
+                  d="M1.45703 1.875L7.70703 8.125L13.957 1.875"
+                  stroke="#999999"
                   strokeWidth="2"
                   strokeLinecap="square"
                 />
