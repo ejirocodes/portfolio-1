@@ -15,7 +15,7 @@ const Newsletter = () => {
           className="w-full placeholder:text-gray5 h-full border border-solid border-r-0 border-gray2 pl-[40px]"
           placeholder="Your email address..."
         />
-        <button className="bg-dark h-full w-[102px] flex items-center justify-center">
+        <button className="bg-dark h-full w-[102px] flex items-center justify-center ">
           <svg
             width="27"
             height="24"

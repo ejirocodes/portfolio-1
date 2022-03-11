@@ -14,8 +14,13 @@ const Article: NextPage = () => {
   const [isShow, setIsShow] = useState(false);
 
   const showAllContent = () => {
-    setContent(articles);
-    setIsShow(true);
+    if (!isShow) {
+      setIsShow(true);
+      setContent(articles);
+    } else {
+      setIsShow(false);
+      setContent(articles.slice(0, 6));
+    }
   };
   return (
     <>
@@ -39,7 +44,7 @@ const Article: NextPage = () => {
           {content.map((article) => (
             <CardArticle article={article} key={article.title} />
           ))}
-          {!isShow && (
+          {
             <div className="mx-auto flex md:mt-[84px]">
               <button
                 onClick={showAllContent}
@@ -52,7 +57,7 @@ const Article: NextPage = () => {
                 "
                 >
                   {/* mr-[13px] */}
-                  See more articles
+                  {!isShow ? "See more articles" : "See less articles"}
                 </span>
                 {/* <svg
                 width="16"
@@ -71,7 +76,7 @@ const Article: NextPage = () => {
               </svg> */}
               </button>
             </div>
-          )}
+          }
           <div className="mb-[140px] md:mt-[215px]">
             <Newsletter />
           </div>
