@@ -5,32 +5,41 @@ import ArrowUp from "./shared/ArrowUp";
 const CardArticle: React.FC<Article> = ({ article }) => {
   return (
     <article
-      className="bg-[#FBFBFB] cursor-grab w-full pt-[70px] pb-[55px] transition min-h-inherit md:group-hover:opacity-50 md:hover:scale-[1.04] hover:shadow-sm  md:hover:opacity mb-[30px]"
+      className="bg-[#FBFBFB] cursor-grab w-full pt-[58px] pb-[47px] transition min-h-inherit md:group-hover:opacity-50 md:hover:scale-[1.04] hover:shadow-sm  md:hover:opacity mb-[30px]"
       itemType="http://schema.org/CreativeWork"
     >
       <div className="">
-        <article className="pb-[68px] border-b-[0.5px] border-solid border-[gray3] ">
-          <div className="px-[96px]">
-            <h2 className="text-dark mb-[49px] text-[23px] font-extrabold uppercase group-hover:text-white">
+        <article className="pb-[50px] border-b-[0.5px] border-solid border-[gray3] ">
+          <div className="px-[80px]">
+            <h2 className="text-dark mb-[39px] text-[20px] leading-[41px] font-extrabold tracking-[4px] uppercase group-hover:text-white">
               {article.tech}
             </h2>
-            <h1 className="text-dark text-[40px] leading-[48px] font-extrabold mb-[4px]">
+            <h1 className="text-dark text-[34px] leading-[34px] font-extrabold mb-[12px]">
               {article.title}
             </h1>
-            <p className="text-gray5 text-[26px] font-normal">
+            <p className="text-gray5 text-[22px] font-normal">
               {article.description}
             </p>
           </div>
         </article>
 
-        <article className="flex items-center justify-between text-gray3 text-[26px] pt-[40px] px-[96px]">
+        <article className="flex items-center justify-between text-gray3 text-[26px] pt-[40px] px-[80px]">
           <div className="flex items-center">
-            <time dateTime={article.date} className="mr-[88px]">
+            <time
+              dateTime={article.date}
+              className="mr-[70px] font-semibold text-[18px]"
+            >
               {article.date}
             </time>
-            <p className="mr-[88px]">{article.duration}</p>
+            <p className="mr-[70px] font-semibold text-[18px]">
+              {article.duration}
+            </p>
 
-            <img src={article.image} alt={article.publisher} />
+            <img
+              src={article.image}
+              alt={article.publisher}
+              className="w-[110px]"
+            />
           </div>
           <ArrowUp strokeColour="#111111" url={article.url} />
         </article>
