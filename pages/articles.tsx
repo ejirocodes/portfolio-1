@@ -31,7 +31,7 @@ const Article: NextPage = () => {
       <main className="md:px-[90px] md:pt-[160px]">
         <section>
           {articles.map((article) => (
-            <CardArticle article={article} key={article.id} />
+            <CardArticle article={article} key={article.title} />
           ))}
           <div className="mx-auto flex md:mt-[84px] md:mb-[215px]">
             <button className="border border-solid border-gray2 text-gray3 inline-flex items-center justify-center font-bold text-[22px] py-[28px] md:w-[310px] mx-auto">
