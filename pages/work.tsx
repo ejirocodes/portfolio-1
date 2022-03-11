@@ -1,4 +1,6 @@
 import React from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
 const Work = () => {
   return (
@@ -12,6 +14,25 @@ const Work = () => {
           <br /> me trust I have built great stuffs
         </p>
       </header>
+      <section>
+        <Tabs>
+          <TabList>
+            <Tab>All</Tab>
+            <Tab>Projects</Tab>
+            <Tab>Open Source</Tab>
+          </TabList>
+
+          <TabPanel>
+            <h2>Any content 1</h2>
+          </TabPanel>
+          <TabPanel>
+            <h2>Any content 2</h2>
+          </TabPanel>
+          <TabPanel>
+            <h2>Any content 2</h2>
+          </TabPanel>
+        </Tabs>
+      </section>
     </section>
   );
 };
