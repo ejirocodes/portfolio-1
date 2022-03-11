@@ -26,3 +26,14 @@
   font-weight: 800;
   font-style: normal;
 }
+@font-face {
+  font-family: "NeueMachina";
+  src: url("../assets/fonts/NeueMachina-Ultrabold.otf");
+  font-weight: 800;
+  font-style: normal;
+}
+@layer components {
+  .active-link {
+    @apply bg-dark text-white h-full w-[177px] flex items-center justify-center  font-['NeueMachina'];
+  }
+}

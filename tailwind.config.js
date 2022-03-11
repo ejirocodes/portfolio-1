@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["Tomato", "system-ui", "san-serif"],
+      NeueMachina: ["NeueMachina"],
     },
     extend: {
       colors: {
