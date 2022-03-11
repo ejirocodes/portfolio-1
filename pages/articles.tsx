@@ -5,10 +5,18 @@ import CardArticle from "../components/CardArticle";
 import { articles } from "../data/article";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useState } from "react";
 // gsap.registerPlugin(ScrollTrigger);
 // gsap.registerPlugin(ScrollTrigger);
 
 const Article: NextPage = () => {
+  const [content, setContent] = useState(articles.slice(0, 6));
+  const [isShow, setIsShow] = useState(false);
+
+  const showAllContent = () => {
+    setContent(articles);
+    setIsShow(true);
+  };
   return (
     <>
       <Head>
@@ -18,8 +26,6 @@ const Article: NextPage = () => {
           content="Articles, content, post and  writings by Ejiro Asiuwhu"
         />
       </Head>
-      <progress max="100" value="20"></progress>
-
       <header className="bg-hero-article md:h-[590px] w-full h-[70vh] bg-cover bg-top flex items-center justify-center">
         <div className="text-center text-white ">
           <h1 className="text-[91px] leading-none font-extrabold">Articles</h1>
@@ -30,13 +36,25 @@ const Article: NextPage = () => {
       </header>
       <main className="md:px-[90px] md:pt-[160px]">
         <section>
-          {articles.map((article) => (
+          {content.map((article) => (
             <CardArticle article={article} key={article.title} />
           ))}
-          <div className="mx-auto flex md:mt-[84px] md:mb-[215px]">
-            <button className="border border-solid border-gray2 text-gray3 inline-flex items-center justify-center font-bold text-[22px] py-[28px] md:w-[310px] mx-auto">
-              <span className="inline-block mr-[13px]">See more articles</span>
-              <svg
+          {!isShow && (
+            <div className="mx-auto flex md:mt-[84px]">
+              <button
+                onClick={showAllContent}
+                className=" btn10 hover-main border border-solid border-gray2 text-white bg-dark hover:text-dark hover:bg-white inline-flex items-center justify-center font-bold text-[22px] py-[28px] md:w-[310px] mx-auto"
+              >
+                <span
+                  className="inline-block 
+              
+                
+                "
+                >
+                  {/* mr-[13px] */}
+                  See more articles
+                </span>
+                {/* <svg
                 width="16"
                 height="10"
                 viewBox="0 0 16 10"
@@ -45,14 +63,16 @@ const Article: NextPage = () => {
               >
                 <path
                   d="M1.45703 1.875L7.70703 8.125L13.957 1.875"
-                  stroke="#999999"
+                  stroke="#ffffff"
+                  className="hover:stroke-dark transition-colors"
                   strokeWidth="2"
                   strokeLinecap="square"
                 />
-              </svg>
-            </button>
-          </div>
-          <div className="mb-[140px]">
+              </svg> */}
+              </button>
+            </div>
+          )}
+          <div className="mb-[140px] md:mt-[215px]">
             <Newsletter />
           </div>
         </section>

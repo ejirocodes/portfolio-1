@@ -81,12 +81,13 @@ export const NavMain = () => {
               <li key={navigation.title} className="h-full">
                 <Link href={navigation.url}>
                   <a
-                    className={
-                      router.asPath === navigation.url
-                        ? "active-link"
-                        : "text-dark border-r border-r-gray3 h-full w-[177px] flex items-center justify-center font-['NeueMachina'] hover:bg-[#FBFBFB] hover:text-dark transition ease-in-out duration-300 "
-                    }
+                    className={`text-dark border-r border-r-gray3 h-full w-[177px] flex items-center justify-center font-['NeueMachina'] hover:bg-[#FBFBFB] hover:text-dark transition ease-in-out duration-300 
+                    ${router.pathname === navigation.url && "active-link"}
+                    `}
                   >
+                    {/* router.asPath === navigation.url
+                        ? "active-link "
+                        : "" */}
                     {navigation.title}
                   </a>
                 </Link>
