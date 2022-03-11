@@ -15,7 +15,7 @@ const Article: NextPage = () => {
         />
       </Head>
 
-      <header className="bg-hero-article md:h-[700px] w-full h-[70vh] bg-fixed bg-cover bg-top flex items-center justify-center">
+      <header className="bg-hero-article md:h-[590px] w-full h-[70vh] bg-cover bg-top flex items-center justify-center">
         <div className="text-center text-white ">
           <h1 className="text-[91px] leading-none font-extrabold">Articles</h1>
           <p className="uppercase text-[20px] font-medium tracking-[4px]">

@@ -10,7 +10,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NavMain />
-      <Component {...pageProps} />
+      <div className="mt-[100px]">
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }
