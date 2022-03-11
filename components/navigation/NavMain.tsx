@@ -22,8 +22,8 @@ export const NavMain = () => {
       url: "/contact",
     },
     {
-      title: "Works",
-      url: "/works",
+      title: "Work",
+      url: "/work",
     },
   ];
   const router = useRouter();
