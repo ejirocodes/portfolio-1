@@ -52,7 +52,9 @@ const Article: NextPage = () => {
               </svg>
             </button>
           </div>
-          <Newsletter />
+          <div className="mb-[140px]">
+            <Newsletter />
+          </div>
         </section>
       </main>
     </>
