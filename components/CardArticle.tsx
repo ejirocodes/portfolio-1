@@ -5,7 +5,7 @@ import ArrowUp from "./shared/ArrowUp";
 const CardArticle: React.FC<Article> = ({ article }) => {
   return (
     <article
-      className="bg-[#FBFBFB] cursor-grab w-full pt-[58px] pb-[47px] transition min-h-inherit md:group-hover:opacity-50 md:hover:scale-[1.04] hover:shadow-sm  md:hover:opacity mb-[30px]"
+      className="bg-[#FBFBFB] cursor-grab w-full pt-[58px] pb-[47px] transition min-h-inherit md:group-hover:opacity-50 md:hover:scale-[1.04]  md:hover:opacity mb-[30px] hover:shadow-[0_26px_49px_rgba(0,0,0,0.08)] "
       itemType="http://schema.org/CreativeWork"
     >
       <div className="">
