@@ -28,7 +28,7 @@ const Article: NextPage = () => {
           </p>
         </div>
       </header>
-      <main className="h-screen md:px-[90px] md:pt-[160px]">
+      <main className="md:px-[90px] md:pt-[160px]">
         <section>
           {articles.map((article) => (
             <CardArticle article={article} key={article.id} />

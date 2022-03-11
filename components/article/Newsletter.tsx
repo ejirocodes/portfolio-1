@@ -17,15 +17,15 @@ const Newsletter = () => {
         />
         <button className="bg-dark h-full w-[102px] flex items-center justify-center">
           <svg
-            width="16"
-            height="16"
-            viewBox="0 0 21 25"
+            width="27"
+            height="24"
+            viewBox="0 0 27 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M18.8887 15.7596L15.2491 2.17631L1.66576 5.81595M15.2491 2.17631L2.75098 23.8237L15.2491 2.17631Z"
-              stroke="#FFFFFF"
+              d="M15.5707 1.68932L25.5718 11.6904L15.5707 21.6914M0.427734 11.6904L25.5718 11.6904L0.427734 11.6904Z"
+              stroke="#fff"
               strokeWidth="2"
               strokeLinecap="square"
             />

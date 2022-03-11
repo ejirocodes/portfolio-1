@@ -68,7 +68,9 @@ export const NavMain = () => {
                 fill="#666666"
               />
             </svg>
-            <p className="font-extrabold text-[28px]">EjiroCode</p>
+            <p className="font-extrabold text-[28px] font-['NeueMachina']">
+              EjiroCode
+            </p>
           </a>
         </Link>
       </div>
