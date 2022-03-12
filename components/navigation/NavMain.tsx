@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Logo from "./Logo";
 import NavOpen from "./NavOpen";
+import { useNav, useNavUpdate, NavContext } from "../../context/navContext";
 
 export const NavMain = () => {
   const navigations = [
@@ -26,7 +27,15 @@ export const NavMain = () => {
   const router = useRouter();
 
   const [navStyle, setNavStyle] = useState(false);
-  const [isNav, setIsNav] = useState(false);
+  // const [isNav, setIsNav] = useState(false);
+  // const nav = useContext(NavContext);
+
+  const isNav = useNav();
+  const toggleNav = useNavUpdate();
+
+  // const toggleNav = () => {
+  //   setIsNav((prev) => !prev);
+  // };
 
   useEffect(() => {
     const onScroll = () => {
@@ -39,10 +48,6 @@ export const NavMain = () => {
     };
     window.addEventListener("scroll", onScroll);
   }, [navStyle]);
-
-  const toggleNav = () => {
-    setIsNav(!isNav);
-  };
 
   return (
     <>
@@ -79,9 +84,14 @@ export const NavMain = () => {
               ))}
             </ul>
           </div>
+
           <button
             className="inline-flex items-end justify-center flex-col pl-[50px] "
-            onClick={toggleNav}
+            onClick={() => {
+              toggleNav(true);
+            }}
+
+            // onClick={toggleNav}
           >
             <span className="bg-dark w-[57px] mb-[8px] h-[3px] inline-flex"></span>
             <span className="bg-dark w-[35px] h-[3px] inline-flex"></span>

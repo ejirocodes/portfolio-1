@@ -3,7 +3,7 @@ import React from "react";
 export const ProjectCard = ({ project }) => {
   return (
     <figure
-      className="h-full max-h-[800px] cursor-grab w-[432px] text-dark shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] drop-shadow-[0_25.8016px_49.9387px_-2.49693px_rgba(0, 0, 0, 0.1)]"
+      className="h-full max-h-[800px] w-full cursor-grab text-dark shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] drop-shadow-[0_25.8016px_49.9387px_-2.49693px_rgba(0, 0, 0, 0.1)]"
       title={project.title}
     >
       <div className="bg-dark py-[140px] max-h-[308px] h-full  flex items-center justify-center">

@@ -32,7 +32,7 @@ const Work = () => {
           <TabPanel>
             <div className="project-card">
               {projects.map((project) => (
-                <div key={project.title} className="mr-[20px]">
+                <div key={project.details} className="mr-[20px]">
                   <ProjectCard project={project} />
                 </div>
               ))}
@@ -43,7 +43,7 @@ const Work = () => {
               {projects
                 .filter((project) => project.type === "project")
                 .map((project) => (
-                  <ProjectCard project={project} key={project.title} />
+                  <ProjectCard project={project} key={project.details} />
                 ))}
             </div>
           </TabPanel>
@@ -52,7 +52,7 @@ const Work = () => {
               {projects
                 .filter((project) => project.type === "open")
                 .map((project) => (
-                  <ProjectCard project={project} key={project.title} />
+                  <ProjectCard project={project} key={project.details} />
                 ))}
             </div>
           </TabPanel>
