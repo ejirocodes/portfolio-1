@@ -87,7 +87,7 @@ const Work = () => {
           </Link>
         </div>
       </section>
-      <section className="mt-[210px]">
+      <section className="md:mt-[210px] md:mx-[110px] md:mb-[110px]">
         <Newsletter />
       </section>
     </section>
