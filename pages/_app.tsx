@@ -3,9 +3,12 @@ import type { AppProps } from "next/app";
 import { NavMain } from "../components/navigation/NavMain";
 import { Footer } from "../components/shared/Footer";
 import { NavProvider } from "../context/navContext";
+import { gsap } from "gsap/dist/gsap";
+import CSSPlugin from "gsap/dist/CSSRulePlugin";
+
+gsap.registerPlugin(CSSPlugin);
 
 // import { gsap } from 'gsap'
-// import { CSSPlugin } from 'gsap/CSSPlugin'
 
 // gsap.registerPlugin(CSSPlugin)
 
