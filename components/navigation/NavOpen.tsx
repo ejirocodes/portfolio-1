@@ -29,7 +29,7 @@ const NavOpen = () => {
   const toggleNav = useContext(NavUpdateContext);
 
   return (
-    <nav className="bg-slate-100 w-screen h-screen fixed top-0 z-30">
+    <nav className="bg-white w-screen h-screen fixed top-0 z-30">
       <section className="flex items-center justify-between px-[107px] pt-[100px]">
         <Logo url="" />
         <div>

@@ -93,8 +93,28 @@ export const NavMain = () => {
 
             // onClick={toggleNav}
           >
-            <span className="bg-dark w-[57px] mb-[8px] h-[3px] inline-flex"></span>
-            <span className="bg-dark w-[35px] h-[3px] inline-flex"></span>
+            <span
+              className={`bg-dark w-[57px] mb-[8px] h-[3px] inline-flex
+
+              transition ease-in-out duration-300 -rotate-45
+              !mb-0
+              !w-[35px]
+              absolute
+              z-50
+              `}
+              // ${isNav ? "active-nav" : ""}
+            ></span>
+            <span
+              className={`bg-dark w-[35px] h-[3px] inline-flex
+             
+              !w-[35px]
+              z-50
+
+                          transition ease-in-out duration-300 rotate-45
+
+            
+            `}
+            ></span>
           </button>
         </div>
       </nav>
