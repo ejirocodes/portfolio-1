@@ -29,17 +29,31 @@ const Work = () => {
           </div>
 
           <TabPanel>
-            <div>
+            <div className="project-card">
               {projects.map((project) => (
-                <ProjectCard project={project} key={project.title} />
+                <div key={project.title} className="mr-[20px]">
+                  <ProjectCard project={project} />
+                </div>
               ))}
             </div>
           </TabPanel>
           <TabPanel>
-            <h2>Any content 2</h2>
+            <div className="project-card">
+              {projects
+                .filter((project) => project.type === "project")
+                .map((project) => (
+                  <ProjectCard project={project} key={project.title} />
+                ))}
+            </div>
           </TabPanel>
           <TabPanel>
-            <h2>Any content 2</h2>
+            <div className="project-card">
+              {projects
+                .filter((project) => project.type === "open")
+                .map((project) => (
+                  <ProjectCard project={project} key={project.title} />
+                ))}
+            </div>
           </TabPanel>
         </Tabs>
       </section>

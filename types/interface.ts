@@ -19,5 +19,5 @@ export interface Project {
   logo: string;
   details: string;
   url: Url[];
-  projectType: string;
+  type: string;
 }

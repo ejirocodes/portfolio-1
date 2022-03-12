@@ -43,6 +43,9 @@
   .hover-main {
     @apply relative overflow-hidden transition-all ease-in-out z-10 duration-300 hover:border hover:border-solid hover:border-dark hover:text-dark;
   }
+  .project-card {
+    @apply grid grid-cols-3 gap-4 bg-[#F7F7F7];
+  }
 }
 .active-nav {
   box-shadow: 0px 10px 104px rgba(0, 0, 0, 0.25);
