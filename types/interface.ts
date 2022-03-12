@@ -9,3 +9,15 @@ export interface Article {
   url: string;
   tags?: string[];
 }
+
+interface Url {
+  type: string;
+  link: string;
+}
+export interface Project {
+  title: string;
+  logo: string;
+  details: string;
+  url: Url[];
+  projectType: string;
+}

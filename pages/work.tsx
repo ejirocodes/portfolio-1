@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Newsletter from "../components/article/Newsletter";
 import { ProjectCard } from "../components/project/ProjectCard";
+import { projects } from "../data/projects";
 
 const Work = () => {
   return (
@@ -12,13 +13,14 @@ const Work = () => {
           /Work
         </h1>
         <p className="text-[22px]">
-          I have written a billion line of code, hahaha... just kidding but{" "}
-          <br /> me trust I have built great stuffs
+          I have written over a billion lines of code, hahaha... just kidding,
+          <br /> But trust me, I&apos;ve built awesome products that I
+          can&apos;t show you cos of NDA 👀
         </p>
       </header>
       <section>
         <Tabs>
-          <div className="border-t border-gray3 py-[40px] border-b text-center">
+          <div className="border-t border-gray3 py-[20px] border-b text-center">
             <TabList className="tabs_main_list">
               <Tab>All</Tab>
               <Tab>Projects</Tab>
@@ -27,7 +29,11 @@ const Work = () => {
           </div>
 
           <TabPanel>
-            <ProjectCard />
+            <div>
+              {projects.map((project) => (
+                <ProjectCard project={project} key={project.title} />
+              ))}
+            </div>
           </TabPanel>
           <TabPanel>
             <h2>Any content 2</h2>
