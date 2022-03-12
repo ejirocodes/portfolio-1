@@ -5,7 +5,9 @@
 :root {
   --primary: #111111;
 }
-
+::selection {
+  background-color: #ffffff;
+}
 @font-face {
   font-family: "Tomato";
   src: url("../assets/fonts/TomatoGrotesk-Regular.otf");
@@ -37,6 +39,9 @@
   font-style: normal;
 }
 @layer components {
+  body {
+    @apply text-dark;
+  }
   .active-link {
     @apply bg-dark !text-white h-full w-[177px] flex items-center justify-center hover:!bg-dark hover:!text-white;
   }
@@ -44,7 +49,7 @@
     @apply relative overflow-hidden transition-all ease-in-out z-10 duration-300 hover:border hover:border-solid hover:border-dark hover:text-dark;
   }
   .project-card {
-    @apply grid grid-cols-3 gap-4 bg-[#F7F7F7];
+    @apply grid grid-cols-3 gap-4 py-[120px] px-[96px] bg-[#F7F7F7];
   }
 }
 .active-nav {

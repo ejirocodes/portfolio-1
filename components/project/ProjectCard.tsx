@@ -9,7 +9,7 @@ export const ProjectCard = ({ project }) => {
       <div className="bg-dark py-[140px] max-h-[308px] h-full  flex items-center justify-center">
         <img src={project.logo} alt={project.title} />
       </div>
-      <div className="p-[32px] border-b border-gray3">
+      <div className="p-[32px] border-b border-gray3 min-h-[200px]">
         <figcaption className="text-[21px] uppercase mb-[11px] font-bold">
           {project.title}
         </figcaption>
