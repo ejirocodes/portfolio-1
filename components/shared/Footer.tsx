@@ -1,32 +1,6 @@
-export const Footer = () => {
-  const socials = [
-    {
-      title: "TW",
-      url: "https://twitter.com/ejirocodes",
-      arialLabel: "Ejiro on Twitter",
-    },
-    {
-      title: "GH",
-      url: "https://github.com/ejirocodes",
-      arialLabel: "Ejiro on GitHub",
-    },
-    {
-      title: "LN",
-      url: "https://www.linkedin.com/in/ejiro-asiuhwu",
-      arialLabel: "Ejiro on LinkedIn",
-    },
-    {
-      title: "MD",
-      url: "https://www.medium.com/ejirocodes",
-      arialLabel: "Ejiro on Medium",
-    },
-    {
-      title: "YT",
-      url: "https://www.youtube.com/channel/UC-exh_bsmkGKuPdr8a_Q8Ng",
-      arialLabel: "Ejiro on YouTube",
-    },
-  ];
+import { socials } from "../../data/social";
 
+export const Footer = () => {
   return (
     <footer className=" text-gray3 md:px-[90px] border-gray2 ">
       <div className="border-t border-solid flex items-center justify-between pt-[50px]  pb-[84px] ">

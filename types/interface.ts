@@ -21,3 +21,9 @@ export interface Project {
   url: Url[];
   type: string;
 }
+
+export interface Social {
+  title: string;
+  url: string;
+  arialLabel: string;
+}

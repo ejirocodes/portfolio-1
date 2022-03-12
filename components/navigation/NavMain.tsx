@@ -10,16 +10,16 @@ export const NavMain = () => {
       url: "/",
     },
     {
+      title: "Work",
+      url: "/work",
+    },
+    {
       title: "Articles",
       url: "/articles",
     },
     {
       title: "Contact",
       url: "/contact",
-    },
-    {
-      title: "Work",
-      url: "/work",
     },
   ];
   const router = useRouter();
