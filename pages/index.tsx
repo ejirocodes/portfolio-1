@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import NavOpen from "../components/navigation/NavOpen";
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +12,6 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <NavOpen />
         <h1 className="text-3xl font-bold underline">Hello world!</h1>
       </main>
     </div>

@@ -26,7 +26,7 @@ const NavOpen = () => {
   ];
 
   return (
-    <nav className="bg-slate-100 w-screen h-screen">
+    <nav className="bg-slate-100 w-screen h-screen fixed top-0 z-30">
       <section className="flex items-center justify-between px-[107px] pt-[100px]">
         <Logo url="" />
         <div>
@@ -43,9 +43,6 @@ const NavOpen = () => {
                     ${router.pathname === navigation.url && "!text-dark"}
                     `}
                 >
-                  {/* router.asPath === navigation.url
-                        ? "active-link "
-                        : "" */}
                   {navigation.title}
                 </a>
               </Link>
@@ -53,8 +50,8 @@ const NavOpen = () => {
           ))}
         </ul>
       </section>
-      <section className="mt-[]">
-        <ul className="flex items-center justify-center">
+      <section className="mt-[100px]">
+        <ul className="flex items-center justify-center border-t border-gray2 py-[66px]  ">
           {socials.map((social) => (
             <li key={social.title}>
               <a
