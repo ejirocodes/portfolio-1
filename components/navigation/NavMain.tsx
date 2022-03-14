@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import Logo from "./Logo";
 import NavOpen from "./NavOpen";
-import { useNav, useNavUpdate, NavContext } from "../../context/navContext";
+import { useNav, useNavUpdate } from "../../context/navContext";
 
 export const NavMain = () => {
   const navigations = [
@@ -27,15 +27,8 @@ export const NavMain = () => {
   const router = useRouter();
 
   const [navStyle, setNavStyle] = useState(false);
-  // const [isNav, setIsNav] = useState(false);
-  // const nav = useContext(NavContext);
-
   const isNav = useNav();
   const toggleNav = useNavUpdate();
-
-  // const toggleNav = () => {
-  //   setIsNav((prev) => !prev);
-  // };
 
   useEffect(() => {
     const onScroll = () => {
@@ -51,14 +44,15 @@ export const NavMain = () => {
 
   return (
     <>
-      {isNav && <NavOpen />}
+      {/* {isNav && <NavOpen />} */}
       <nav
-        className={`flex items-center w-full bg-[#ffffff] fixed transition-all ease-linear top-0 z-20 justify-between px-[50px] h-[100px] border-b border-b-gray3
+        aria-label="Main menu"
+        className={`flex  items-center opacity-100 w-full bg-[#ffffff] fixed transition-all ease-linear top-0 z-20 justify-between pl-[50px] h-[100px] border-b border-b-gray3
 
       ${
         navStyle ? "active-nav" : "backdrop-saturate-[100%] backdrop-blur-[0px]"
       }
-     `}
+      `}
       >
         <div className="flex items-center">
           <Logo url="/" />
@@ -86,38 +80,43 @@ export const NavMain = () => {
           </div>
 
           <button
-            className="inline-flex items-end justify-center flex-col pl-[50px] "
+            aria-controls="main-menu"
+            aria-label="Open main menu"
+            role="navigation"
+            className="inline-flex cursor-pointer items-end justify-center flex-col px-[50px] min-w-[157px] "
             onClick={() => {
-              toggleNav(true);
+              toggleNav();
             }}
-
-            // onClick={toggleNav}
           >
             <span
               className={`bg-dark w-[57px] mb-[8px] h-[3px] inline-flex
-
-              transition ease-in-out duration-300 -rotate-45
-              !mb-0
+              
+              ${
+                isNav
+                  ? `transition ease-in-out duration-300 -rotate-45  z-50   !mb-0
               !w-[35px]
-              absolute
-              z-50
+              absolute          `
+                  : ""
+              }
               `}
-              // ${isNav ? "active-nav" : ""}
             ></span>
             <span
               className={`bg-dark w-[35px] h-[3px] inline-flex
-             
-              !w-[35px]
-              z-50
 
-                          transition ease-in-out duration-300 rotate-45
-
+                          ${
+                            isNav
+                              ? `   
+                              !w-[35px]
+                              z-50 transition ease-in-out duration-300 rotate-45`
+                              : ""
+                          }
             
             `}
             ></span>
           </button>
         </div>
       </nav>
+      <NavOpen />
     </>
   );
 };
