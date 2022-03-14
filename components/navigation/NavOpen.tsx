@@ -43,8 +43,6 @@ const NavOpen = () => {
         ${isNav ? "!opacity-100 !h-screen !w-screen" : ""}
         `}
       >
-        {console.log(isNav)}
-
         <section className="flex items-center justify-between px-[107px] pt-[78px]">
           <Logo url="/" />
           <div>
