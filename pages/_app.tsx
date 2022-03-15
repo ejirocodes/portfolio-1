@@ -11,10 +11,10 @@ gsap.registerPlugin(CSSPlugin);
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <NavProvider>
-      <NavMain />
+      {/* <NavMain /> */}
       <div className="mt-[100px]">
         <Component {...pageProps} />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </NavProvider>
   );

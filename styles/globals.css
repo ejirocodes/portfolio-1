@@ -57,6 +57,15 @@
   button {
     @apply focus-visible:border-0 focus-visible:outline-none focus-visible:shadow-none;
   }
+  .link-hover {
+    @apply relative after:absolute after:h-[2px] after:w-full after:bottom-[-4px] after:left-0 after:bg-dark after:transition-all after:duration-500 after:hover:w-0;
+  }
+  .icon-hover {
+    @apply group-hover:translate-x-2 transition-all duration-300 ease-[cubic-bezier(.32,2,.55,.27)];
+  }
+  .container-space {
+    @apply lg:px-[120px] px-[56px];
+  }
 }
 .active-nav {
   box-shadow: 0px 10px 104px rgba(0, 0, 0, 0.25);

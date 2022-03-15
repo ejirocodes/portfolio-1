@@ -199,47 +199,6 @@ const Work = () => {
           can&apos;t show you cos of NDA 👀
         </p>
       </header>
-      {/* <div className="gallery">
-        <ul className="cards">
-          <li>0</li>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-          <li>11</li>
-          <li>12</li>
-          <li>13</li>
-          <li>14</li>
-          <li>15</li>
-          <li>16</li>
-          <li>17</li>
-          <li>18</li>
-          <li>19</li>
-          <li>20</li>
-          <li>21</li>
-          <li>22</li>
-          <li>23</li>
-          <li>24</li>
-          <li>25</li>
-          <li>26</li>
-          <li>27</li>
-          <li>28</li>
-          <li>29</li>
-          <li>30</li>
-        </ul>
-        <div className="actions">
-          <button className="prev">Prev</button>
-          <button className="next">Next</button>
-        </div>
-      </div>
-      <div className="drag-proxy"></div> */}
-
       <section>
         <Tabs>
           <div className="border-t border-gray3 py-[20px] border-b text-center">
@@ -280,33 +239,32 @@ const Work = () => {
           </TabPanel>
         </Tabs>
         <div className="flex items-center justify-center md:mt-[170px] ">
-          {/* <Link href="/articles"> */}
-          <a className="inline-flex items-center group">
-            <span
-              className="mr-[18px] text-[32px] relative font-bold after:absolute after:h-[2px] after:w-full after:bottom-[-4px] after:left-0 after:bg-dark after:transition-all 
-              after:duration-500 after:hover:w-0 
+          <Link href="/articles">
+            <a className="inline-flex items-center group">
+              <span
+                className="mr-[18px] text-[32px]  icon-hover  font-bold link-hover
               "
-            >
-              View my articles
-            </span>
-            <span className="group-hover:translate-x-2 transition-all duration-300 ease-[cubic-bezier(.32,2,.55,.27)]">
-              <svg
-                width="16"
-                height="18"
-                viewBox="0 0 16 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M7.44449 2.28287L14.0478 8.88614L7.2168 15.7171M14.0478 8.88614L0.613531 9.11384L14.0478 8.88614Z"
-                  stroke="#111111"
-                  strokeWidth="2"
-                  strokeLinecap="square"
-                />
-              </svg>
-            </span>
-          </a>
-          {/* </Link> */}
+                View my articles
+              </span>
+              <span className="icon-hover">
+                <svg
+                  width="16"
+                  height="18"
+                  viewBox="0 0 16 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.44449 2.28287L14.0478 8.88614L7.2168 15.7171M14.0478 8.88614L0.613531 9.11384L14.0478 8.88614Z"
+                    stroke="#111111"
+                    strokeWidth="2"
+                    strokeLinecap="square"
+                  />
+                </svg>
+              </span>
+            </a>
+          </Link>
         </div>
       </section>
       <section className="md:mt-[210px] md:mx-[110px] md:mb-[110px]">

@@ -5,7 +5,7 @@ export const Footer = () => {
     <footer className=" text-gray3 md:px-[90px] border-gray2 ">
       <div className="border-t border-solid flex items-center justify-between pt-[50px]  pb-[84px] ">
         <small className=" text-[20px] font-medium">
-          ©{new Date().getFullYear()} - All rights reserved
+          &copy;{new Date().getFullYear()} - All rights reserved
         </small>
         <ul className="flex items-center">
           {socials.map((social) => (

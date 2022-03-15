@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -7,73 +8,9 @@ import { gsap } from "gsap/dist/gsap";
 import { Cursor } from "../animation/cursor";
 import useScroll from "../hooks/useScroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
+import { socials } from "../data/social";
 
 const Home: NextPage = () => {
-  const boxRef = useRef();
-  const cursor = useRef();
-
-  // useEffect(() => {
-  //   barba.init({
-  //     // ...
-  //   });
-  // }, []);
-
-  const beginCursor = () => {
-    // const cursorRef = cursor?.current;
-    // const cursor = new Cursor(cursorRef);
-    // [...document.querySelectorAll("a")].forEach((link) => {
-    //   link.addEventListener("mouseenter", () => cursor.enter());
-    //   link.addEventListener("mouseleave", () => cursor.leave());
-    // });
-    // [...document.querySelectorAll("button")].forEach((link) => {
-    //   link.addEventListener("mouseenter", () => cursor.enter());
-    //   link.addEventListener("mouseleave", () => cursor.leave());
-    // });
-  };
-
-  // useEffect(() => {
-  //   import("locomotive-scroll/dist/locomotive-scroll").then(
-  //     (locomotiveModule) => {
-  //       const ScrollEl = document.querySelector("#scroll");
-  //       const scroll = new locomotiveModule.default({
-  //         el: ScrollEl,
-  //         smooth: true,
-  //         // multiplier: 1,
-  //         // class: "is-reveal",
-  //       });
-  //     }
-  //   );
-  // }, []);
-
-  // useEffect(() => {
-  //   // useScroll();
-  //   // beginCursor();
-  //   const el = document.getElementById("scroll");
-  //   import("locomotive-scroll/dist/locomotive-scroll").then(
-  //     (LocomotiveScroll) => {
-  //       const scroll = new LocomotiveScroll({ el });
-  //       scroll.on("scroll", () => {
-  //         console.log(scroll.scrollY);
-  //       });
-  //     }
-  //   );
-
-  //   // const scroll = new LocomotiveScroll({
-  //   //   el,
-  //   //   smooth: true,
-  //   //   multiplier: 1,
-  //   //   class: "is-reveal",
-  //   // });
-  //   console.log(scroll);
-  //   // gsap.to(boxRef.current, {
-  //   //   rotation: "+=360",
-  //   //   stagger: 0.33,
-  //   //   repeat: -1,
-  //   //   repeatDelay: 1,
-  //   //   yoyo: true,
-  //   // });
-  // }, []);
-
   return (
     <div>
       <Head>
@@ -82,32 +19,67 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div data-scroll-container>
-        <div data-scroll-section>
-          <h1 data-scroll>Hey</h1>
-          <p data-scroll>👋</p>
-        </div>
-        <div data-scroll-section>
-          <h2 data-scroll data-scroll-speed="1">
-            What's up?
-          </h2>
-          <p data-scroll data-scroll-speed="2">
-            😬
-          </p>
-        </div>
-      </div>
-      <svg
-        className="cursor"
-        width="32"
-        ref={cursor}
-        height="32"
-        viewBox="0 0 20 20"
-      >
-        <circle className="cursor__inner" cx="10" cy="10" r="5" />
-      </svg>
-
-      <main id="scroll" data-scroll-container>
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <main className="md:pt-[137px] w-full">
+        <section className="flex  lg:items-center lg:justify-between  md:flex-row flex-col w-full container-space">
+          <div className="w-full md:w-1/2 md:mb-0 mb-[60px]">
+            <h1 className="font-extrabold font-['NeueMachina'] leading-none md:text-[110px] text-[42px] mb-[20px]">
+              Frontend
+              <br />
+              Engineer.
+            </h1>
+            <p className="lg:mb-[90px] mb-[40px] md:text-[22px] text-[14px] leading-[24px] md:leading-[40px]">
+              Hello, Ejiro Asiuwhu here. I focused on developing premium web
+              experiences through the lens of design thinking, web performance,
+              accessibility, interaction{" "}
+            </p>
+            <a
+              href=""
+              className="font-bold flex group md:text-[24px] text-[12px]  items-center "
+            >
+              <span className="inline-flex mr-[17px] icon-hover link-hover">
+                What brought you to Code Lord?
+              </span>
+              <span className=" icon-hover">
+                <svg
+                  width="16"
+                  height="17"
+                  viewBox="0 0 16 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.00098 1.87029L13.6301 8.49941L7.00098 15.1285M13.6301 8.49941L0.37185 8.49941L13.6301 8.49941Z"
+                    stroke="#111111"
+                    strokeWidth="2"
+                    strokeLinecap="square"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div className="w-full md:w-1/2 flex justify-end items-center flex-col">
+            <img
+              src="/img/ejiro-asiuwhu.png"
+              alt="Ejiro Asiuwhu"
+              className="lg:mb-[50px] mb-[30px]"
+            />
+            <ul className="flex items-center">
+              {socials.map((social) => (
+                <li key={social.title}>
+                  <a
+                    href={social.url}
+                    aria-label={social.arialLabel}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-[60px] text-gray2 font-extrabold"
+                  >
+                    {social.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
       </main>
     </div>
   );
