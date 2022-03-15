@@ -13,6 +13,7 @@ import About from "../components/home/About";
 import TextHoriz from "../components/shared/TextHoriz";
 import TechStack from "../components/home/TechStack";
 import Experience from "../components/home/Experience";
+import Endorsement from "../components/home/Endorsement";
 
 const Home: NextPage = () => {
   return (
@@ -88,6 +89,7 @@ const Home: NextPage = () => {
         <TextHoriz />
         <TechStack />
         <Experience />
+        <Endorsement />
       </main>
     </div>
   );
