@@ -9,6 +9,7 @@ import { Cursor } from "../animation/cursor";
 import useScroll from "../hooks/useScroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import { socials } from "../data/social";
+import About from "../components/home/About";
 
 const Home: NextPage = () => {
   return (
@@ -80,6 +81,7 @@ const Home: NextPage = () => {
             </ul>
           </div>
         </section>
+        <About />
       </main>
     </div>
   );
