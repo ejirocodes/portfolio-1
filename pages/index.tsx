@@ -11,6 +11,7 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 import { socials } from "../data/social";
 import About from "../components/home/About";
 import TextHoriz from "../components/shared/TextHoriz";
+import TechStack from "../components/home/TechStack";
 
 const Home: NextPage = () => {
   return (
@@ -22,7 +23,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="md:pt-[137px] w-full">
-        <section className="flex lg:items-center 2xl:justify-center lg:justify-between  md:flex-row flex-col w-full container-space">
+        <section className="flex lg:items-center huge:justify-center lg:justify-between  md:flex-row flex-col w-full container-space">
           <div className="w-full md:w-1/2  2xl:w-auto mr-0 2xl:mr-[50px] md:mb-0 mb-[60px]">
             <h1 className="font-extrabold font-['NeueMachina'] leading-none md:text-[110px] sm:text-[60px] text-[42px] mb-[20px]">
               <span className="mr-[8px]">Frontend</span>
@@ -61,7 +62,7 @@ const Home: NextPage = () => {
           </div>
           <div className="w-full md:w-1/2 ml-0 2xl:ml-[50px]  2xl:w-auto  flex justify-end items-center flex-col">
             <img
-              src="/img/ejiro-asiuwhu.png"
+              src="/img/ejiro-asiuwhu.webp"
               alt="Ejiro Asiuwhu"
               className="lg:mb-[50px] mb-[30px]"
             />
@@ -84,6 +85,7 @@ const Home: NextPage = () => {
         </section>
         <About />
         <TextHoriz />
+        <TechStack />
       </main>
     </div>
   );

@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 function TextHoriz1() {
   return (
-    <div className="flex items-center stroke-text md:mr-0 mr-[20px]">
+    <div className="flex items-center stroke-text ">
       <svg
         className="md:w-[58px] w-[30px]"
         height="83"
@@ -26,7 +26,7 @@ function TextHoriz1() {
 }
 function TextHoriz2() {
   return (
-    <div className="flex items-center md:ml-0  ml-[20px]">
+    <div className="flex items-center md:mx-0  mx-[20px]">
       <svg
         className="md:w-[58px] w-[30px]"
         height="83"

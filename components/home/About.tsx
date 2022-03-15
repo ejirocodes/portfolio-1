@@ -1,14 +1,11 @@
-import React from "react";
 import LineHoriz from "../shared/LineHoriz";
 
 export default function About() {
   return (
-    <section className="container-space my-[40px]">
+    <section className="container-space md:my-[150px] my-[100px]">
       <div className="md:mb-[40px] mb-[25px]">
-        <h1 className="font-NeueMachina font-extrabold flex md:items-center leading-none flex-col md:flex-row">
-          <span className="md:text-[110px] text-[50px] stroke-text stroke-text md:mr-[32px] md:mb-0 mb-[8px]">
-            01.
-          </span>
+        <h1 className="stroke-heading">
+          <span className="stroke-text stroke">01.</span>
           <span className="md:text-[60px] text-[40px]">About me</span>
         </h1>
       </div>

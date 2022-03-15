@@ -69,6 +69,12 @@
   .marque-title {
     @apply md:ml-[32px] ml-[12px] whitespace-nowrap overflow-hidden;
   }
+  .stroke-heading {
+    @apply font-NeueMachina font-extrabold flex md:items-center leading-none flex-col md:flex-row;
+  }
+  .stroke {
+    @apply md:text-[110px] text-[50px] md:mr-[32px] md:mb-0 mb-[8px];
+  }
 }
 .stroke-text {
   -webkit-text-fill-color: #ffffff;
