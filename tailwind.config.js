@@ -9,6 +9,9 @@ module.exports = {
       NeueMachina: ["NeueMachina"],
     },
     extend: {
+      screens: {
+        xsm: "500px",
+      },
       colors: {
         dark: "#111111",
         gray2: "#CCCCCC",

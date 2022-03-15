@@ -20,14 +20,14 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="md:pt-[137px] w-full">
-        <section className="flex  lg:items-center lg:justify-between  md:flex-row flex-col w-full container-space">
-          <div className="w-full md:w-1/2 md:mb-0 mb-[60px]">
-            <h1 className="font-extrabold font-['NeueMachina'] leading-none md:text-[110px] text-[42px] mb-[20px]">
-              Frontend
-              <br />
+        <section className="flex lg:items-center 2xl:justify-center lg:justify-between  md:flex-row flex-col w-full container-space">
+          <div className="w-full md:w-1/2  2xl:w-auto mr-0 2xl:mr-[50px] md:mb-0 mb-[60px]">
+            <h1 className="font-extrabold font-['NeueMachina'] leading-none md:text-[110px] sm:text-[60px] text-[42px] mb-[20px]">
+              <span className="mr-[8px]">Frontend</span>
+              <br className="sm:hidden 2xl:inline xl:inline lg:inline md:inline" />
               Engineer.
             </h1>
-            <p className="lg:mb-[90px] mb-[40px] md:text-[22px] text-[14px] leading-[24px] md:leading-[40px]">
+            <p className="lg:mb-[90px]  mb-[40px] w-full max-w-[538px] md:text-[22px] text-[14px] leading-[24px] md:leading-[40px]">
               Hello, Ejiro Asiuwhu here. I focused on developing premium web
               experiences through the lens of design thinking, web performance,
               accessibility, interaction{" "}
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
               href=""
               className="font-bold flex group md:text-[24px] text-[12px]  items-center "
             >
-              <span className="inline-flex mr-[17px] icon-hover link-hover">
+              <span className="inline-flex mr-[17px] icon-hover  after:bottom-[3px]  link-hover">
                 What brought you to Code Lord?
               </span>
               <span className=" icon-hover">
@@ -57,7 +57,7 @@ const Home: NextPage = () => {
               </span>
             </a>
           </div>
-          <div className="w-full md:w-1/2 flex justify-end items-center flex-col">
+          <div className="w-full md:w-1/2 ml-0 2xl:ml-[50px]  2xl:w-auto  flex justify-end items-center flex-col">
             <img
               src="/img/ejiro-asiuwhu.png"
               alt="Ejiro Asiuwhu"
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
                     aria-label={social.arialLabel}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-[60px] text-gray2 font-extrabold"
+                    className="md:mr-[46px] mr-[23px] md:text-[26px] text-[14px] text-gray2 font-extrabold"
                   >
                     {social.title}
                   </a>
