@@ -10,6 +10,7 @@ import useScroll from "../hooks/useScroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import { socials } from "../data/social";
 import About from "../components/home/About";
+import TextHoriz from "../components/shared/TextHoriz";
 
 const Home: NextPage = () => {
   return (
@@ -82,6 +83,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         <About />
+        <TextHoriz />
       </main>
     </div>
   );
