@@ -13,7 +13,7 @@ import About from "../components/home/About";
 import TextHoriz from "../components/shared/TextHoriz";
 import TechStack from "../components/home/TechStack";
 import Experience from "../components/home/Experience";
-import Endorsement from "../components/home/Endorsement";
+import Endorsement from "../components/home/endorsement/Endorsement";
 
 const Home: NextPage = () => {
   return (

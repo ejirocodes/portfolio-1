@@ -20,7 +20,7 @@ function TextHoriz1() {
           strokeLinecap="square"
         />
       </svg>
-      <h1 className="marque-title">Cord Lord</h1>
+      <h1 className="marque-title">Code Lord</h1>
     </div>
   );
 }
@@ -44,14 +44,14 @@ function TextHoriz2() {
           strokeLinecap="square"
         />
       </svg>
-      <h1 className="marque-title">Cord Lord</h1>
+      <h1 className="marque-title">Code Lord</h1>
     </div>
   );
 }
 export default function TextHoriz() {
   return (
     <section className="md:text-[100px] relative text-[40px] font-NeueMachina flex items-center justify-center ">
-      <Marquee pauseOnHover={true} speed={250}>
+      <Marquee pauseOnHover={true} speed={50}>
         <div className="flex w-full justify-around items-center">
           <TextHoriz1 />
           <TextHoriz2 />

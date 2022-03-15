@@ -1,5 +1,7 @@
 import React from "react";
-import LineHoriz from "../shared/LineHoriz";
+import LineHoriz from "../../shared/LineHoriz";
+import EndorsementCard from "./EndorsementCard";
+import Marquee from "react-fast-marquee";
 
 export default function Endorsement() {
   return (
@@ -11,6 +13,9 @@ export default function Endorsement() {
         </h1>
       </div>
       <LineHoriz />
+      <Marquee pauseOnHover={true} speed={50}>
+        <EndorsementCard />
+      </Marquee>
     </section>
   );
 }
