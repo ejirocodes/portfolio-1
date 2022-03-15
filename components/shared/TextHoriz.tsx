@@ -3,10 +3,9 @@ import Marquee from "react-fast-marquee";
 
 function TextHoriz1() {
   return (
-    <div className="flex items-center stroke-text">
-      <h1 className="mr-[32px] whitespace-nowrap overflow-hidden">Cord Lord</h1>
+    <div className="flex items-center stroke-text md:mr-0 mr-[20px]">
       <svg
-        width="58"
+        className="md:w-[58px] w-[30px]"
         height="83"
         viewBox="0 0 58 83"
         fill="none"
@@ -21,15 +20,15 @@ function TextHoriz1() {
           strokeLinecap="square"
         />
       </svg>
+      <h1 className="marque-title">Cord Lord</h1>
     </div>
   );
 }
 function TextHoriz2() {
   return (
-    <div className="flex items-center">
-      <h1 className="mr-[32px] whitespace-nowrap overflow-hidden">Cord Lord</h1>
+    <div className="flex items-center md:ml-0  ml-[20px]">
       <svg
-        width="59"
+        className="md:w-[58px] w-[30px]"
         height="83"
         viewBox="0 0 59 83"
         fill="none"
@@ -45,6 +44,7 @@ function TextHoriz2() {
           strokeLinecap="square"
         />
       </svg>
+      <h1 className="marque-title">Cord Lord</h1>
     </div>
   );
 }

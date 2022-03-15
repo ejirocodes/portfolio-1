@@ -66,6 +66,9 @@
   .container-space {
     @apply lg:px-[120px] px-[56px];
   }
+  .marque-title {
+    @apply md:ml-[32px] ml-[12px] whitespace-nowrap overflow-hidden;
+  }
 }
 .stroke-text {
   -webkit-text-fill-color: #ffffff;
