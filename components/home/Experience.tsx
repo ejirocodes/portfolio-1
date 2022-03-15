@@ -125,7 +125,28 @@ export default function Experience() {
               </p>
             </div>
           </div>
-          <LineHoriz />
+        </div>
+        <div className="md:text-center text-left mt-[50px] md:mt-[120px] ">
+          <button className=" btn10 hover-main group border border-solid border-gray2 text-white bg-dark hover:text-dark hover:bg-white inline-flex items-center justify-center font-bold text-[22px] py-[28px] md:w-[260px] mx-auto">
+            <span className="mr-[12px]">See full CV</span>
+            <span>
+              <svg
+                width="11"
+                height="13"
+                viewBox="0 0 11 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  className="group-hover:stroke-[#111] transition-all"
+                  d="M9.26717 7.82993L7.51275 1.28236L0.965173 3.03678M7.51275 1.28236L1.48828 11.717L7.51275 1.28236Z"
+                  stroke="#ffffff"
+                  strokeWidth="1.44609"
+                  strokeLinecap="square"
+                />
+              </svg>
+            </span>
+          </button>
         </div>
       </div>
     </section>

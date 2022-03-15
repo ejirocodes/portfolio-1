@@ -9,7 +9,7 @@ const Article: NextPage = () => {
   const [content, setContent] = useState(articles.slice(0, 6));
   const [isShow, setIsShow] = useState(false);
 
-  const showAllContent = () => {
+  const toggleArticles = () => {
     if (!isShow) {
       setIsShow(true);
       setContent(articles);
@@ -22,10 +22,10 @@ const Article: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Article | Ejiro Asiuwhu</title>
+        <title>Articles | Ejiro Asiuwhu</title>
         <meta
           name="description"
-          content="Articles, content, post and  writings by Ejiro Asiuwhu"
+          content="Articles, content, post, videos and  writings by Ejiro Asiuwhu"
         />
       </Head>
       <header className="bg-hero-article md:h-[590px] w-full h-[70vh] bg-cover bg-top flex items-center justify-center">
@@ -36,7 +36,7 @@ const Article: NextPage = () => {
           </p>
         </div>
       </header>
-      <main className="md:px-[90px] md:pt-[160px]">
+      <main className="container-space md:pt-[160px]">
         <section>
           {content.map((article) => (
             <CardArticle article={article} key={article.title} />
@@ -44,7 +44,7 @@ const Article: NextPage = () => {
           {
             <div className="mx-auto flex md:mt-[84px]">
               <button
-                onClick={showAllContent}
+                onClick={toggleArticles}
                 className=" btn10 hover-main border border-solid border-gray2 text-white bg-dark hover:text-dark hover:bg-white inline-flex items-center justify-center font-bold text-[22px] py-[28px] md:w-[310px] mx-auto"
               >
                 <span
