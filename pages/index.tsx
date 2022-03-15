@@ -12,6 +12,7 @@ import { socials } from "../data/social";
 import About from "../components/home/About";
 import TextHoriz from "../components/shared/TextHoriz";
 import TechStack from "../components/home/TechStack";
+import Experience from "../components/home/Experience";
 
 const Home: NextPage = () => {
   return (
@@ -86,6 +87,7 @@ const Home: NextPage = () => {
         <About />
         <TextHoriz />
         <TechStack />
+        <Experience />
       </main>
     </div>
   );
