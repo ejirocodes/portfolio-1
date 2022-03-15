@@ -1,13 +1,9 @@
 import { NextPage } from "next";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Newsletter from "../components/article/Newsletter";
 import CardArticle from "../components/CardArticle";
 import { articles } from "../data/article";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useState } from "react";
-// gsap.registerPlugin(ScrollTrigger);
-// gsap.registerPlugin(ScrollTrigger);
 
 const Article: NextPage = () => {
   const [content, setContent] = useState(articles.slice(0, 6));
@@ -22,6 +18,7 @@ const Article: NextPage = () => {
       setContent(articles.slice(0, 6));
     }
   };
+
   return (
     <>
       <Head>

@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "gsap": "^3.9.1",
+    "locomotive-scroll": "^4.1.4",
     "next": "12.1.0",
     "next-transpile-modules": "^9.0.0",
     "react": "17.0.2",
@@ -17,6 +19,7 @@
     "react-tabs": "^4.0.1"
   },
   "devDependencies": {
+    "@types/gsap": "^3.0.0",
     "@types/node": "17.0.21",
     "@types/react": "17.0.39",
     "@types/react-tabs": "^2.3.4",

@@ -1,8 +1,79 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
+import barba from "@barba/core";
+import { gsap } from "gsap/dist/gsap";
+import { Cursor } from "../animation/cursor";
+import useScroll from "../hooks/useScroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
 const Home: NextPage = () => {
+  const boxRef = useRef();
+  const cursor = useRef();
+
+  // useEffect(() => {
+  //   barba.init({
+  //     // ...
+  //   });
+  // }, []);
+
+  const beginCursor = () => {
+    // const cursorRef = cursor?.current;
+    // const cursor = new Cursor(cursorRef);
+    // [...document.querySelectorAll("a")].forEach((link) => {
+    //   link.addEventListener("mouseenter", () => cursor.enter());
+    //   link.addEventListener("mouseleave", () => cursor.leave());
+    // });
+    // [...document.querySelectorAll("button")].forEach((link) => {
+    //   link.addEventListener("mouseenter", () => cursor.enter());
+    //   link.addEventListener("mouseleave", () => cursor.leave());
+    // });
+  };
+
+  // useEffect(() => {
+  //   import("locomotive-scroll/dist/locomotive-scroll").then(
+  //     (locomotiveModule) => {
+  //       const ScrollEl = document.querySelector("#scroll");
+  //       const scroll = new locomotiveModule.default({
+  //         el: ScrollEl,
+  //         smooth: true,
+  //         // multiplier: 1,
+  //         // class: "is-reveal",
+  //       });
+  //     }
+  //   );
+  // }, []);
+
+  // useEffect(() => {
+  //   // useScroll();
+  //   // beginCursor();
+  //   const el = document.getElementById("scroll");
+  //   import("locomotive-scroll/dist/locomotive-scroll").then(
+  //     (LocomotiveScroll) => {
+  //       const scroll = new LocomotiveScroll({ el });
+  //       scroll.on("scroll", () => {
+  //         console.log(scroll.scrollY);
+  //       });
+  //     }
+  //   );
+
+  //   // const scroll = new LocomotiveScroll({
+  //   //   el,
+  //   //   smooth: true,
+  //   //   multiplier: 1,
+  //   //   class: "is-reveal",
+  //   // });
+  //   console.log(scroll);
+  //   // gsap.to(boxRef.current, {
+  //   //   rotation: "+=360",
+  //   //   stagger: 0.33,
+  //   //   repeat: -1,
+  //   //   repeatDelay: 1,
+  //   //   yoyo: true,
+  //   // });
+  // }, []);
+
   return (
     <div>
       <Head>
@@ -11,7 +82,31 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <div data-scroll-container>
+        <div data-scroll-section>
+          <h1 data-scroll>Hey</h1>
+          <p data-scroll>👋</p>
+        </div>
+        <div data-scroll-section>
+          <h2 data-scroll data-scroll-speed="1">
+            What's up?
+          </h2>
+          <p data-scroll data-scroll-speed="2">
+            😬
+          </p>
+        </div>
+      </div>
+      <svg
+        className="cursor"
+        width="32"
+        ref={cursor}
+        height="32"
+        viewBox="0 0 20 20"
+      >
+        <circle className="cursor__inner" cx="10" cy="10" r="5" />
+      </svg>
+
+      <main id="scroll" data-scroll-container>
         <h1 className="text-3xl font-bold underline">Hello world!</h1>
       </main>
     </div>

@@ -8,10 +8,6 @@ import CSSPlugin from "gsap/dist/CSSRulePlugin";
 
 gsap.registerPlugin(CSSPlugin);
 
-// import { gsap } from 'gsap'
-
-// gsap.registerPlugin(CSSPlugin)
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <NavProvider>
