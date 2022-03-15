@@ -39,7 +39,7 @@ const Home: NextPage = () => {
               href=""
               className="font-bold flex group md:text-[24px] text-[12px]  items-center "
             >
-              <span className="inline-flex mr-[17px] icon-hover  after:bottom-[3px]  link-hover">
+              <span className="inline-flex mr-[17px] icon-hover md:after:h-[2px]  after:h-[1px] md:after:bottom-[3px]  after:bottom-[1px]  link-hover">
                 What brought you to Code Lord?
               </span>
               <span className=" icon-hover">

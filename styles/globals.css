@@ -75,6 +75,12 @@
   .stroke {
     @apply md:text-[110px] text-[50px] md:mr-[32px] md:mb-0 mb-[8px];
   }
+  .tech-container {
+    @apply md:my-[40px]  my-[20px] flex justify-between md:items-center md:flex-row flex-col w-full;
+  }
+  .tech-title {
+    @apply md:text-[30px] text-[18px] font-extrabold md:mr-[120px] md:w-[25%] md:text-right;
+  }
 }
 .stroke-text {
   -webkit-text-fill-color: #ffffff;
