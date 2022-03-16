@@ -47,13 +47,15 @@ He has great knowledge of front-end development, he delivered complex stories wi
   ];
   return (
     <section className="md:mb-[150px] mb-[100px]">
-      <div className="md:mb-[40px] mb-[25px] items-start tech-container">
+      <div className="md:mb-[40px] mb-[25px] items-start tech-container container-space">
         <h1 className="stroke-heading  md:w-1/2">
           <span className="stroke-text stroke">04.</span>
           <span className="md:text-[60px] text-[40px]">Endorsement</span>
         </h1>
       </div>
-      <LineHoriz />
+      <div className="container-space">
+        <LineHoriz />
+      </div>
       <section className="md:mt-[60px] mt-[30px]">
         <Marquee pauseOnHover={true} gradient={false} speed={50}>
           {endorsements.map((endorsement) => (
