@@ -15,6 +15,7 @@ import TechStack from "../components/home/TechStack";
 import Experience from "../components/home/Experience";
 import Endorsement from "../components/home/endorsement/Endorsement";
 import Work from "../components/home/work/Work";
+import Newsletter from "../components/article/Newsletter";
 
 const Home: NextPage = () => {
   return (
@@ -95,6 +96,9 @@ const Home: NextPage = () => {
         <Experience />
         <Endorsement />
         <Work />
+        <div className="container-space">
+          <Newsletter />
+        </div>
       </main>
     </div>
   );
