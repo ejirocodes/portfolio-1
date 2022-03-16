@@ -24,6 +24,25 @@ export const NavMain = () => {
       url: "/contact",
     },
   ];
+
+  const navigation2 = [
+    {
+      title: "Home",
+      url: "/",
+    },
+    {
+      title: "Work",
+      url: "/work",
+    },
+    {
+      title: "Résumé",
+      url: "/articles",
+    },
+    {
+      title: "Contact",
+      url: "/contact",
+    },
+  ];
   const router = useRouter();
 
   const [navStyle, setNavStyle] = useState(false);
@@ -53,7 +72,7 @@ export const NavMain = () => {
       ${
         navStyle ? "active-nav" : "backdrop-saturate-[100%] backdrop-blur-[0px]"
       }
-      ${isNav ? " !h-screen !w-screen !pl-[107px]" : ""}
+      ${isNav ? " !h-screen !w-screen !pl-[107px] !border-0" : ""}
       `}
       >
         <div
@@ -67,6 +86,33 @@ export const NavMain = () => {
             <Logo url="/" />
           </div>
 
+          <section
+            className={`${
+              isNav
+                ? "opacity-100 pt-[77px] "
+                : "opacity-0 h-0 transition-all w-0"
+            }`}
+          >
+            <ul className="flex items-center flex-col justify-center h-full">
+              {navigation2.map((navigation) => (
+                <li key={navigation.title} className="h-full">
+                  <Link href={navigation.url}>
+                    <a
+                      onClick={() => {
+                        toggleNav(false);
+                      }}
+                      className={`text-gray2 font-extrabold leading-none text-[130px] mb-[20px] flex items-center justify-center font-['NeueMachina'] transition ease-in-out duration-300 
+                    ${router.pathname === navigation.url && "!text-dark"}
+                    `}
+                    >
+                      {navigation.title}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+
           <div
             className={`flex justify-center h-full
           ${isNav ? "!h-auto items-center" : ""}
@@ -74,7 +120,7 @@ export const NavMain = () => {
           >
             <div
               className={`h-full
-              ${isNav ? "opacity-0 !h-0" : ""}
+              ${isNav ? "opacity-0 !h-0 hidden" : ""}
             
             `}
             >
@@ -94,6 +140,10 @@ export const NavMain = () => {
                 ))}
               </ul>
             </div>
+
+            {/* {isNav && ( */}
+
+            {/* )} */}
 
             <button
               className={`uppercase text-[24px] font-bold 

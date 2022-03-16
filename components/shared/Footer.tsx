@@ -2,26 +2,8 @@ import { socials } from "../../data/social";
 
 export const Footer = () => {
   return (
-    <footer className=" text-gray3 md:px-[90px] border-gray2 ">
-      <div className="border-t border-solid flex items-center justify-between pt-[50px]  pb-[84px] ">
-        <small className=" text-[20px] font-medium">
-          &copy;{new Date().getFullYear()} - All rights reserved
-        </small>
-        <ul className="flex items-center">
-          {socials.map((social) => (
-            <li key={social.title}>
-              <a
-                href={social.url}
-                aria-label={social.arialLabel}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mr-[60px] text-dark font-extrabold"
-              >
-                {social.title}
-              </a>
-            </li>
-          ))}
-        </ul>
+    <footer className=" text-gray3 border-gray2 container-space">
+      <div className="border-t border-solid flex items-center justify-between pt-[50px]   ">
         <div>
           <p
             aria-label="Augustine Asiuwhu - Product Designer"
@@ -59,7 +41,31 @@ export const Footer = () => {
             </span>
           </p>
         </div>
+
+        <ul className="flex items-center">
+          {socials.map((social) => (
+            <li key={social.title}>
+              <a
+                href={social.url}
+                aria-label={social.arialLabel}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mr-[60px] text-dark font-extrabold"
+              >
+                {social.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <small className=" md:text-[20px] font-medium">
+          &copy;{new Date().getFullYear()} - All rights reserved
+        </small>
       </div>
+      <p className="md:pt-[40px] text-center">
+        Connect with me{" "}
+        <a href="mailto:ejiroasiuwhu10@gmail.com">ejiroasiuwhu10@gmail.com</a>
+      </p>
     </footer>
   );
 };
