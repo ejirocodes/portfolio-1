@@ -1,18 +1,13 @@
 import React from "react";
 
-export default function EndorsementCard() {
+export default function EndorsementCard({ endorsement }) {
   return (
-    <figure className="bg-[#F7F7F7] md:py-[30px] md:px-[38px] md:w-[509px]">
-      <figcaption className="md:mb-[38px]">
-        Ejiro and I have worked together on a number of projects, and I have
-        really enjoyed working with him. He is a highly decorated software
-        developer with experience in building scalable systems. I highly
-        recommend him!
-      </figcaption>
+    <figure className="bg-[#F7F7F7] md:text-[14px] text-[12px] flex flex-col justify-center md:py-[30px] md:px-[38px] md:w-[509px] h-full md:h-[280px]">
+      <figcaption className="md:mb-[38px]  ">{endorsement.body}</figcaption>
       <div className="flex justify-between">
         <figcaption>
-          <p className="font-extrabold mb-[5px]"> Kenneth Jimmy</p>
-          <p>Fullstack Developer + Devops</p>
+          <p className="font-extrabold mb-[5px]"> {endorsement.name}</p>
+          <p>{endorsement.position}</p>
         </figcaption>
         <div>
           <svg
