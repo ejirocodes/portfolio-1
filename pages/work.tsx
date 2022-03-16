@@ -223,7 +223,7 @@ const Work = () => {
               {projects
                 .filter((project) => project.type === "project")
                 .map((project) => (
-                  <ProjectCard project={project} key={project.details} />
+                  <ProjectCard project={project} key={project.title} />
                 ))}
               <div className="drag-proxy"></div>
             </div>
@@ -233,7 +233,7 @@ const Work = () => {
               {projects
                 .filter((project) => project.type === "open")
                 .map((project) => (
-                  <ProjectCard project={project} key={project.details} />
+                  <ProjectCard project={project} key={project.id} />
                 ))}
             </div>
           </TabPanel>

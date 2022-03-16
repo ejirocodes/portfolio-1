@@ -15,6 +15,7 @@ interface Url {
   link: string;
 }
 export interface Project {
+  id: number;
   title: string;
   logo: string;
   details: string;
