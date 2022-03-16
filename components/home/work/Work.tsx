@@ -30,7 +30,7 @@ export default function work() {
       <LineHoriz />
       <div className="mt-[60px] flex items-center md:flex-row flex-col">
         {items.map((item) => (
-          <div className=" md:mr-[20px] md:mb-0 mb-[30px]" key={item.title}>
+          <div className=" md:mr-[20px] md:mb-0 odd:mb-[30px]" key={item.title}>
             <WorkCard work={item} />
           </div>
         ))}
