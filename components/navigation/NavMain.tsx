@@ -47,18 +47,19 @@ export const NavMain = () => {
       {/* {isNav && <NavOpen />} */}
       <nav
         aria-label="Main menu"
+        id="main-menu"
         className={`flex  items-center  h-[100px] opacity-100 w-full bg-[#ffffff] fixed transition-all ease-linear top-0 z-20 justify-between pl-[50px] border-b border-b-gray3
 
       ${
         navStyle ? "active-nav" : "backdrop-saturate-[100%] backdrop-blur-[0px]"
       }
-      ${isNav ? " !h-screen !w-screen " : ""}
+      ${isNav ? " !h-screen !w-screen !pl-[107px]" : ""}
       `}
       >
         <div
           className={`flex  items-center  justify-between w-full  h-[100px] 
 
-        ${isNav ? "!items-start !h-full pl-[50px] pt-[36px]" : ""}
+        ${isNav ? "!items-start !h-full  pt-[36px]" : ""}
         
         `}
         >
@@ -66,7 +67,11 @@ export const NavMain = () => {
             <Logo url="/" />
           </div>
 
-          <div className="flex justify-center h-full">
+          <div
+            className={`flex justify-center h-full
+          ${isNav ? "!h-auto items-center" : ""}
+          `}
+          >
             <div
               className={`h-full
               ${isNav ? "opacity-0 !h-0" : ""}
@@ -82,9 +87,6 @@ export const NavMain = () => {
                     ${router.pathname === navigation.url && "active-link"}
                     `}
                       >
-                        {/* router.asPath === navigation.url
-                        ? "active-link "
-                        : "" */}
                         {navigation.title}
                       </a>
                     </Link>
@@ -94,10 +96,27 @@ export const NavMain = () => {
             </div>
 
             <button
+              className={`uppercase text-[24px] font-bold 
+              ${
+                !isNav
+                  ? "!opacity-0 !h-0"
+                  : "transition-all flex !justify-start pr-[12px]"
+              }
+              `}
+              onClick={() => {
+                toggleNav(false);
+              }}
+            >
+              Close
+            </button>
+
+            <button
               aria-controls="main-menu"
-              aria-label="Open main menu"
+              aria-label={isNav ? "Close menu" : "Open menu"}
               role="navigation"
-              className="inline-flex cursor-pointer items-end justify-center flex-col px-[50px] min-w-[157px] "
+              className={`inline-flex cursor-pointer items-end transition-all justify-center flex-col px-[50px] min-w-[157px] 
+              ${isNav ? "   !justify-start !pl-0 min-w-[auto] !pr-[107px]" : ""}
+              `}
               onClick={() => {
                 toggleNav();
               }}
@@ -109,7 +128,7 @@ export const NavMain = () => {
                 isNav
                   ? `transition ease-in-out duration-300 -rotate-45  z-50   !mb-0
               !w-[35px]
-              absolute          `
+              absolute       `
                   : ""
               }
               `}
