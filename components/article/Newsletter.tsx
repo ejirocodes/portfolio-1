@@ -37,7 +37,7 @@ const Newsletter = () => {
           </svg>
         </button>
       </form>
-      <p className="text-gray5 md:font-[20px] text-[10px]">
+      <p className="text-gray5 md:text-[20px] text-[10px]">
         By subscribing, you agree with Revue’s Terms of Service and Privacy
         Policy.
       </p>
