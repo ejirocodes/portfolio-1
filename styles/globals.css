@@ -81,6 +81,9 @@
   .tech-title {
     @apply md:text-[30px] text-[18px] font-extrabold md:mr-[120px] md:w-[25%] md:text-right;
   }
+  .container-mb {
+    @apply md:mb-[150px] mb-[100px];
+  }
 }
 .stroke-text {
   -webkit-text-fill-color: #ffffff;

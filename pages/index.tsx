@@ -98,7 +98,9 @@ const Home: NextPage = () => {
         <Endorsement />
         <Work />
         <Quote />
-        <div className="container-space">{/* <Newsletter /> */}</div>
+        <div className="md:container-space ">
+          <Newsletter />
+        </div>
       </main>
     </div>
   );

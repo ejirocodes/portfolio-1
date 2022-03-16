@@ -2,7 +2,7 @@ import LineHoriz from "../shared/LineHoriz";
 
 export default function Experience() {
   return (
-    <section className="container-space md:mb-[150px] mb-[100px]">
+    <section className="container-space container-mb">
       <div className="md:mb-[40px] mb-[25px]  tech-container">
         <span className="invisible flex">0</span>
         <h1 className="stroke-heading  md:w-1/2">

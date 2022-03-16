@@ -46,7 +46,7 @@ He has great knowledge of front-end development, he delivered complex stories wi
     },
   ];
   return (
-    <section className="md:mb-[150px] mb-[100px]">
+    <section className="container-mb">
       <div className="md:mb-[40px] mb-[25px] items-start tech-container container-space">
         <h1 className="stroke-heading  md:w-1/2">
           <span className="stroke-text stroke">04.</span>

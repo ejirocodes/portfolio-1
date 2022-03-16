@@ -1,23 +1,27 @@
 const Newsletter = () => {
   return (
-    <section className="bg-[#FBFBFB] text-center px-[180px] pt-[105px] pb-[121px]">
-      <h1 className="mb-[19px] text-dark text-[42px] leading-[48px] font-bold ">
+    <section className="bg-[#FBFBFB] text-center md:px-[180px] px-[58px] md:pt-[105px] pt-[43px] pb-[48px] md:pb-[121px]">
+      <h1 className="md:mb-[19px] mb-[6px] text-dark md:text-[42px] text-[20px] leading-[48px] font-bold ">
         Ejiro Asiuhwu&apos;s Newsletter
       </h1>
-      <p className="md:mb-[57px] text-gray5 text-[22px] leading-[35px]">
+      <p className="md:mb-[57px] mb-[30px] text-gray5 md:text-[22px] text-[10px] leading-[16px] md:leading-[35px]">
         A monthly newsletter where I share resources around Tech,
         <br />
         Career and Lifestyle. No spam, unsubscribe at any time.
       </p>
-      <div className="flex items-center justify-center h-[87px] md:mb-[60px]">
+      <form className="flex items-center justify-center md:h-[87px] h-[40px] md:mb-[60px] mb-[40px]">
         <input
-          type="text"
-          className="w-full placeholder:text-gray5 h-full border border-solid border-r-0 border-gray2 pl-[40px]"
+          required
+          type="email"
+          className="w-full placeholder:text-gray5 placeholder:text-[10px] md:placeholder:text-[20px] h-full border border-solid border-r-0 border-gray2 pl-[40px]"
           placeholder="Your email address..."
         />
-        <button className="bg-dark h-full w-[102px] group flex items-center justify-center focus:bg-slate-800 active:bg-slate-900 ">
+        <button
+          type="submit"
+          className="bg-dark h-full w-[68px]  md:w-[102px] group flex items-center justify-center focus:bg-slate-800 active:bg-slate-900 "
+        >
           <svg
-            className="group-hover:translate-x-2 transition-all duration-300 ease-[cubic-bezier(.32,2,.55,.27)]"
+            className="group-hover:translate-x-2 md:w-full w-[10px] transition-all duration-300 ease-[cubic-bezier(.32,2,.55,.27)]"
             width="27"
             height="24"
             viewBox="0 0 27 24"
@@ -32,8 +36,8 @@ const Newsletter = () => {
             />
           </svg>
         </button>
-      </div>
-      <p className="text-gray5 font-[20px]">
+      </form>
+      <p className="text-gray5 md:font-[20px] text-[10px]">
         By subscribing, you agree with Revue’s Terms of Service and Privacy
         Policy.
       </p>
