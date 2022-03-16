@@ -3,8 +3,8 @@ import React from "react";
 
 export default function WorkCard({ work }) {
   return (
-    <section className="relative bg-[#FBFBFB] md:px-[100px] md:py-[100px]  ">
-      <h1 className="mb-[12px] md:text-[36px] font-bold text-[24px] ">
+    <section className="relative bg-[#FBFBFB] md:px-[100px] md:py-[100px] py-[50px] px-[44px] ">
+      <h1 className="mb-[12px] md:text-[36px] font-bold text-[24px] leading-[24px] md:leading-[44px] ">
         {work.title}
       </h1>
       <p className="text-[14px] md:text-[22px] md:mb-[60px] mb-[40px] ">
@@ -34,9 +34,10 @@ export default function WorkCard({ work }) {
           </a>
         </Link>
       </div>
-      <span className="absolute top-[53px] right-[58px]">
+      <span className="absolute md:top-[53px] md:right-[58px] top-[120px]  right-[28px] ">
         {work.isWork ? (
           <svg
+            className="w-[13px] md:full"
             width="22"
             height="32"
             viewBox="0 0 22 32"
@@ -52,6 +53,7 @@ export default function WorkCard({ work }) {
           </svg>
         ) : (
           <svg
+            className="w-[13px] md:full"
             width="24"
             height="24"
             viewBox="0 0 24 24"
