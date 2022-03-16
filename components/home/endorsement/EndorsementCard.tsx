@@ -2,11 +2,13 @@ import React from "react";
 
 export default function EndorsementCard({ endorsement }) {
   return (
-    <figure className="bg-[#F7F7F7] md:text-[14px] text-[12px] flex flex-col justify-center md:py-[30px] md:px-[38px] md:w-[509px] h-full md:h-[280px]">
-      <figcaption className="md:mb-[38px]  ">{endorsement.body}</figcaption>
+    <figure className="bg-[#F7F7F7] md:text-[14px] text-[12px] flex flex-col justify-between md:py-[30px] md:px-[38px] p-[20px] md:w-[509px] w-[321px]  md:h-[280px] h-full md:min-h-auto min-h-[220px]">
+      <figcaption className="md:mb-[30px] mb-[20px]  md:leading-[26px] leading-[18px]">
+        {endorsement.body}
+      </figcaption>
       <div className="flex justify-between">
         <figcaption>
-          <p className="font-extrabold mb-[5px]"> {endorsement.name}</p>
+          <p className="font-extrabold mb-[5px] "> {endorsement.name}</p>
           <p>{endorsement.position}</p>
         </figcaption>
         <div>
