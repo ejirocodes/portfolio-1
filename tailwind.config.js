@@ -22,6 +22,7 @@ module.exports = {
       },
       backgroundImage: {
         "hero-article": "url('/img/ejiro-banner.png')",
+        "hero-quote": "url('/img/banner-sec.png')",
       },
     },
   },

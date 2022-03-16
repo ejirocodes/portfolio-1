@@ -16,6 +16,7 @@ import Experience from "../components/home/Experience";
 import Endorsement from "../components/home/endorsement/Endorsement";
 import Work from "../components/home/work/Work";
 import Newsletter from "../components/article/Newsletter";
+import Quote from "../components/home/Quote";
 
 const Home: NextPage = () => {
   return (
@@ -96,6 +97,7 @@ const Home: NextPage = () => {
         <Experience />
         <Endorsement />
         <Work />
+        <Quote />
         <div className="container-space">
           <Newsletter />
         </div>
