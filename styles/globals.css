@@ -146,7 +146,7 @@
 .btn10:hover::before,
 .btn1O:hover::before {
   opacity: 1;
-  width: 116%;
+  width: 136%;
 }
 .btn10:hover::after,
 .btn1O:hover::after {

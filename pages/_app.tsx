@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       {/* <NavMain /> */}
       <div className="mt-[100px]">
         <Component {...pageProps} />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </NavProvider>
   );
