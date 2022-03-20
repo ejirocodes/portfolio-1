@@ -271,3 +271,21 @@ a:hover {
   visibility: hidden;
   position: absolute;
 } */
+
+
+
+body::-webkit-scrollbar-track
+{
+	background-color: transparent;
+}
+
+body::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #fbfbfb;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background-color: #111111;	
+}

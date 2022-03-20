@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import Logo from "./Logo";
 import NavOpen from "./NavOpen";
 import { useNav, useNavUpdate } from "../../context/navContext";
+import { socials } from "../../data/social";
 
 export const NavMain = () => {
   const navigations = [
@@ -83,20 +84,18 @@ export const NavMain = () => {
         <div
           className={`flex  items-center  justify-between w-full  h-[100px] 
 
-        ${isNav ? "!items-start !h-full  pt-[36px]" : ""}
+        ${isNav ? "!items-start !h-full  pt-[36px] w-full" : ""}
         
         `}
         >
-          <div
-            className="flex items-center"
-          >
+          <div className="flex items-center">
             <Logo url="/" />
           </div>
 
           <section
             className={`${
               isNav
-                ? "opacity-100 pt-[77px] "
+                ? "opacity-100 pt-[77px] w-full"
                 : "opacity-0  transition-all hidden"
             }`}
           >
@@ -120,6 +119,21 @@ export const NavMain = () => {
                 </li>
               ))}
             </ul>
+            <ul className="flex items-center justify-center border-t border-gray2 py-[66px]  ">
+                {socials.map((social) => (
+                  <li key={social.title}>
+                    <a
+                      href={social.url}
+                      aria-label={social.arialLabel}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mr-[60px] text-gray2 font-extrabold text-[27px]"
+                    >
+                      {social.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
           </section>
 
           <div
@@ -149,12 +163,14 @@ export const NavMain = () => {
                 ))}
               </ul>
             </div>
+              
+
 
             {/* {isNav && ( */}
 
             {/* )} */}
 
-            <button
+            {/* <button
               className={`uppercase text-[24px] font-bold 
               ${
                 !isNav
@@ -169,14 +185,14 @@ export const NavMain = () => {
               }}
             >
               Close
-            </button>
+            </button> */}
 
             <button
               aria-controls="main-menu"
               aria-label={isNav ? "Close menu" : "Open menu"}
               role="navigation"
               className={`inline-flex cursor-pointer items-end transition-all justify-center flex-col px-[50px] min-w-[157px] 
-              ${isNav ? "   !justify-start !pl-0 min-w-[auto] !pr-[50px]" : ""}
+              ${isNav ? " mt-[20px]   !justify-start !pl-0 min-w-[auto] !pr-[50px]" : ""}
               `}
               onClick={() => {
                 // @ts-ignore
