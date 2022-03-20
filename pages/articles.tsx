@@ -36,7 +36,7 @@ const Article: NextPage = () => {
           </p>
         </div>
       </header>
-      <main className="container-space md:pt-[160px]">
+      <main className=" lg:px-[120px] px-[18px] md:pt-[160px]">
         <section>
           {content.map((article) => (
             // @ts-ignore
