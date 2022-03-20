@@ -52,7 +52,7 @@
     @apply grid grid-cols-3 gap-4 py-[120px] px-[96px] bg-[#F7F7F7];
   }
   input {
-    @apply focus-visible:border-2 focus-visible:outline-none focus-visible:shadow-none;
+    @apply focus-visible:border-none focus-visible:outline-none focus-visible:shadow-none;
   }
   button {
     @apply focus-visible:border-0 focus-visible:outline-none focus-visible:shadow-none;

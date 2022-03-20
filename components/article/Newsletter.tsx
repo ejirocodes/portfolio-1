@@ -13,12 +13,12 @@ const Newsletter = () => {
         <input
           required
           type="email"
-          className="w-full placeholder:text-gray5 placeholder:text-[10px] md:placeholder:text-[20px] h-full border border-solid border-r-0 border-gray2 pl-[40px]"
+          className="w-full placeholder:text-gray5 focus-visible:border-solid focus-visible:border-dark focus-visible:border active:border-dark active:border placeholder:text-[10px] md:placeholder:text-[20px] h-full border border-solid border-r-0 border-gray2 md:pl-[40px] pl-[16px]"
           placeholder="Your email address..."
         />
         <button
           type="submit"
-          className="bg-dark h-full w-[68px]  md:w-[102px] group flex items-center justify-center focus:bg-slate-800 active:bg-slate-900 "
+          className="bg-dark h-full w-[68px]  md:w-[102px] group flex items-center justify-center focus:bg-dark active:bg-dark "
         >
           <svg
             className="group-hover:translate-x-2 md:w-full w-[10px] transition-all duration-300 ease-[cubic-bezier(.32,2,.55,.27)]"
