@@ -77,7 +77,7 @@ export const NavMain = () => {
       ${
         navStyle ? "active-nav" : "backdrop-saturate-[100%] backdrop-blur-[0px]"
       }
-      ${isNav ? " !h-screen !w-screen !pl-[107px] !border-0" : ""}
+      ${isNav ? " !h-screen !w-screen !pl-[50px] !border-0" : ""}
       `}
       >
         <div
@@ -90,7 +90,7 @@ export const NavMain = () => {
           <div
             className="flex items-center"
             onClick={() => {
-                          // @ts-ignore
+              // @ts-ignore
 
               toggleNav(false);
             }}
@@ -111,7 +111,7 @@ export const NavMain = () => {
                   <Link href={navigation.url}>
                     <a
                       onClick={() => {
-                                    // @ts-ignore
+                        // @ts-ignore
 
                         toggleNav(false);
                       }}
@@ -168,7 +168,7 @@ export const NavMain = () => {
               }
               `}
               onClick={() => {
-                            // @ts-ignore
+                // @ts-ignore
 
                 toggleNav(false);
               }}
@@ -181,10 +181,10 @@ export const NavMain = () => {
               aria-label={isNav ? "Close menu" : "Open menu"}
               role="navigation"
               className={`inline-flex cursor-pointer items-end transition-all justify-center flex-col px-[50px] min-w-[157px] 
-              ${isNav ? "   !justify-start !pl-0 min-w-[auto] !pr-[107px]" : ""}
+              ${isNav ? "   !justify-start !pl-0 min-w-[auto] !pr-[50px]" : ""}
               `}
               onClick={() => {
-                            // @ts-ignore
+                // @ts-ignore
 
                 toggleNav();
               }}

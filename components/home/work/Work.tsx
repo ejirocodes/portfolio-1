@@ -31,7 +31,7 @@ export default function work() {
       <div className="mt-[60px] lg:h-[550px] flex items-center md:flex-row flex-col">
         {items.map((item) => (
           <div
-            className=" md:mr-[20px] h-full md:mb-0 md:odd:mb-0 odd:mb-[30px]"
+            className=" md:mr-[20px] h-full md:mb-0 md:odd:mb-0 odd:mb-[30px] w-full min-h-full md:p-[0.5em]"
             key={item.title}
           >
             <WorkCard work={item} />

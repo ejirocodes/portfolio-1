@@ -12,8 +12,9 @@ export default function WorkCard({ work }) {
         {work.lead}
       </p>
       <div className="text-left mt-[50px] xl:mt-[120px] lg:mt-[80px] ">
-        <Link href="/work">
-          <a className="btn10 hover-main group border border-solid border-gray2 text-white bg-dark hover:text-dark hover:bg-white inline-flex items-center justify-center font-bold text-[14px] md:text-[19px] py-[28px] md:w-[305px] w-[210px] mx-auto">
+        <Link href={work.link}>
+          <a className="btn10 hover-main md:h-auto h-[63px]  group border border-solid border-gray2 text-white bg-dark hover:text-dark 
+          hover:bg-white inline-flex items-center justify-center MD:font-bold  font-semibold text-[14px] w-full md:text-[19px] py-[28px] md:w-[305px] mx-auto">
             <span className="mr-[12px]">{work.linkText}</span>
             <span>
               <svg
