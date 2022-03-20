@@ -9,14 +9,20 @@ import { Cursor } from "../animation/cursor";
 import useScroll from "../hooks/useScroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import { socials } from "../data/social";
-import About from "../components/home/About";
+// import About from "../components/home/About";
 import TextHoriz from "../components/shared/TextHoriz";
 import TechStack from "../components/home/TechStack";
 import Experience from "../components/home/Experience";
 import Endorsement from "../components/home/endorsement/Endorsement";
 import Work from "../components/home/work/Work";
-import Newsletter from "../components/article/Newsletter";
+// import Newsletter from "../components/article/Newsletter";
 import Quote from "../components/home/Quote";
+
+import dynamic from 'next/dynamic'
+
+const About = dynamic(() => import('../components/home/About'))
+const Newsletter = dynamic(() => import('../components/article/Newsletter'))
+
 
 const Home: NextPage = () => {
   return (
