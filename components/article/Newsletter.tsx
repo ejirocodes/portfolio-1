@@ -1,7 +1,7 @@
 const Newsletter = () => {
   return (
     <section className="bg-[#FBFBFB] text-center md:px-[180px] px-[58px] md:pt-[105px] pt-[43px] pb-[48px] md:pb-[121px]">
-      <h1 className="md:mb-[19px] mb-[6px] text-dark md:text-[42px] text-[20px] leading-[48px] font-bold ">
+      <h1 className="md:mb-[19px] mb-[6px] leading-[20px] text-dark lg:text-[42px] md:text-[38px] sm:text-[20px] text-[18px]  md:leading-[48px] font-bold ">
         Ejiro Asiuhwu&apos;s Newsletter
       </h1>
       <p className="md:mb-[57px] mb-[30px] text-gray5 md:text-[22px] text-[10px] leading-[16px] md:leading-[35px]">

@@ -36,25 +36,30 @@ const Article: NextPage = () => {
           </p>
         </div>
       </header>
-      <main className=" lg:px-[120px] px-[18px] md:pt-[160px]">
+      <main className=" lg:px-[120px] px-[18px] md:pt-[160px] pt-[45px]">
         <section>
           {content.map((article) => (
             // @ts-ignore
             <CardArticle article={article} key={article.title} />
           ))}
           {
-            <div className="mx-auto flex md:mt-[84px]">
+            <div className="mx-auto flex md:mt-[150px] pt-[30px] ">
               <button
                 onClick={toggleArticles}
-                className="btn10 hover-main group !border !border-solid !border-dark text-white bg-dark hover:text-dark hover:bg-white inline-flex items-center justify-center font-bold text-[22px] py-[28px] md:w-[310px] mx-auto"
+                className="btn10 hover-main group !border !border-solid 
+                !border-dark 
+                text-white bg-dark hover:text-dark 
+                hover:bg-white inline-flex items-center justify-center 
+                font-bold lg:text-[22px] md:text-[18px] text-[10px] py-[28px] md:w-[310px] w-[153px] md:h-[91px] 
+                h-[50px] mx-auto" 
               >
                 <span
                   className="inline-block 
               
-                  mr-[13px]
-                
-                "
-                >
+                  
+                  "
+                  >
+                  {/* // mr-[13px] */}
                   {!isShow ? "See more articles" : "See less articles"}
                 </span>
                 {/* <svg
@@ -75,7 +80,7 @@ const Article: NextPage = () => {
               </button>
             </div>
           }
-          <div className="mb-[140px] md:mt-[215px]">
+          <div className="md:my-[150px] my-[100px]">
             <Newsletter />
           </div>
         </section>
