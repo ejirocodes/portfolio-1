@@ -28,10 +28,10 @@ const Article: NextPage = () => {
           content="Articles, content, post, videos and  writings by Ejiro Asiuwhu"
         />
       </Head>
-      <header className="bg-hero-article md:h-[590px] w-full h-[70vh] bg-cover bg-top flex items-center justify-center">
+      <header className="bg-hero-article md:h-[590px] h-[222px] w-full bg-cover bg-top flex items-center justify-center">
         <div className="text-center text-white ">
-          <h1 className="text-[91px] leading-none font-extrabold">Articles</h1>
-          <p className="uppercase text-[20px] font-medium tracking-[4px]">
+          <h1 className="md:text-[91px] text-[34px] leading-none font-extrabold">Articles</h1>
+          <p className="uppercase md:text-[20px] text-[8px]  font-medium md:tracking-[4px] tracking-[0.27em]">
             By Ejiro AsiuwHu
           </p>
         </div>
@@ -46,15 +46,15 @@ const Article: NextPage = () => {
             <div className="mx-auto flex md:mt-[84px]">
               <button
                 onClick={toggleArticles}
-                className=" btn10 hover-main border border-solid border-gray2 text-white bg-dark hover:text-dark hover:bg-white inline-flex items-center justify-center font-bold text-[22px] py-[28px] md:w-[310px] mx-auto"
+                className="btn10 hover-main group !border !border-solid !border-dark text-white bg-dark hover:text-dark hover:bg-white inline-flex items-center justify-center font-bold text-[22px] py-[28px] md:w-[310px] mx-auto"
               >
                 <span
                   className="inline-block 
               
+                  mr-[13px]
                 
                 "
                 >
-                  {/* mr-[13px] */}
                   {!isShow ? "See more articles" : "See less articles"}
                 </span>
                 {/* <svg
@@ -63,11 +63,11 @@ const Article: NextPage = () => {
                 viewBox="0 0 16 10"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-              >
+                >
                 <path
                   d="M1.45703 1.875L7.70703 8.125L13.957 1.875"
                   stroke="#ffffff"
-                  className="hover:stroke-dark transition-colors"
+                  className="group-hover:stroke-dark transition-colors"
                   strokeWidth="2"
                   strokeLinecap="square"
                 />

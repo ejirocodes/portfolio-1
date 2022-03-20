@@ -89,11 +89,6 @@ export const NavMain = () => {
         >
           <div
             className="flex items-center"
-            onClick={() => {
-              // @ts-ignore
-
-              toggleNav(false);
-            }}
           >
             <Logo url="/" />
           </div>

@@ -127,8 +127,9 @@ export default function Experience() {
           </div>
         </div>
         <div className="md:text-center text-left mt-[50px] md:mt-[120px] ">
-          <button className=" btn10 hover-main group border border-solid border-gray2 text-white bg-dark hover:text-dark hover:bg-white inline-flex items-center justify-center font-bold text-[22px] py-[28px] md:w-[260px] mx-auto">
-            <span className="mr-[12px]">See full CV</span>
+          <button className=" btn10 hover-main group border border-solid border-gray2 text-white bg-dark md:px-[50px] hover:text-dark hover:bg-white inline-flex items-center 
+          justify-center font-bold md:text-[22px] text[14px] md:py-[32px] py-[15px] px-[20px] ">
+            <span className="mr-[12px]">Download Résumé</span>
             <span>
               <svg
                 width="11"

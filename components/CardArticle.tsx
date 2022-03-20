@@ -11,10 +11,10 @@ const CardArticle: React.FC<Article> = ({ article }) => {
       <div className="">
         <article className="pb-[50px] border-b-[0.5px] border-solid border-[gray3] ">
           <div className="px-[80px]">
-            <h2 className="text-dark mb-[39px] text-[20px] leading-[41px] font-extrabold tracking-[4px] uppercase group-hover:text-white">
+            <h2 className="text-dark mb-[39px] md:text-[20px] text-[10px] leading-[41px] font-extrabold tracking-[4px] uppercase group-hover:text-white">
               {article.tech}
             </h2>
-            <h1 className="text-dark text-[34px] leading-[34px] font-extrabold mb-[12px]">
+            <h1 className="text-dark md:text-[34px] text-[16px] leading-[34px] font-extrabold mb-[12px]">
               {article.title}
             </h1>
             <p className="text-gray5 text-[22px] font-normal">
