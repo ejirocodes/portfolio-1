@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
 import { Tab, TabList, TabPanel } from "react-tabs";
 const Tabs = dynamic(
+  // @ts-ignore
   import("react-tabs").then((mod) => mod.Tabs),
   { ssr: false }
 ); // disable ssr
@@ -104,7 +105,7 @@ const Work = () => {
     // );
 
     // feed in an offset (like a time on the seamlessLoop timeline, but it can exceed 0 and duration() in either direction; it'll wrap) and it'll set the scroll position accordingly. That'll call the onUpdate() on the trigger if there's a change.
-    function scrollToOffset(offset) {
+    function scrollToOffset(offset: any) {
       // moves the scroll playhead to the place that corresponds to the totalTime value of the seamlessLoop, and wraps if necessary.
       let snappedTime = snapTime(offset),
         progress =
@@ -127,6 +128,7 @@ const Work = () => {
     //   .addEventListener("click", () =>
     //     scrollToOffset(scrub.vars.offset - spacing)
     //   );
+            // @ts-ignore
 
     function buildSeamlessLoop(items, spacing, animateFunc) {
       let rawSequence = gsap.timeline({ paused: true }), // this is where all the "real" animations live
@@ -143,15 +145,21 @@ const Work = () => {
           },
         }),
         cycleDuration = spacing * items.length,
+                    // @ts-ignore
+
         dur; // the duration of just one animateFunc() (we'll populate it in the .forEach() below...
 
       // loop through 3 times so we can have an extra cycle at the start and end - we'll scrub the playhead only on the 2nd cycle
       items
         .concat(items)
         .concat(items)
+                    // @ts-ignore
+
         .forEach((item, i) => {
           let anim = animateFunc(items[i % items.length]);
           rawSequence.add(anim, i * spacing);
+                      // @ts-ignore
+
           dur || (dur = anim.duration());
         });
 
@@ -159,6 +167,8 @@ const Work = () => {
       seamlessLoop.fromTo(
         rawSequence,
         {
+                      // @ts-ignore
+
           time: cycleDuration + dur / 2,
         },
         {

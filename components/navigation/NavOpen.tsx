@@ -49,6 +49,7 @@ const NavOpen = () => {
             <button
               className="uppercase text-[24px] font-bold "
               onClick={() => {
+                            // @ts-ignore
                 toggleNav(false);
               }}
             >
@@ -63,6 +64,7 @@ const NavOpen = () => {
                 <Link href={navigation.url}>
                   <a
                     onClick={() => {
+                                  // @ts-ignore
                       toggleNav(false);
                     }}
                     className={`text-gray2 font-extrabold leading-none text-[130px] mb-[20px] flex items-center justify-center font-['NeueMachina'] transition ease-in-out duration-300 

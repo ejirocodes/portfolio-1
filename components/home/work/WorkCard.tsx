@@ -1,16 +1,17 @@
 import Link from "next/link";
 import React from "react";
+            // @ts-ignore
 
 export default function WorkCard({ work }) {
   return (
-    <section className="relative bg-[#FBFBFB] md:px-[100px] md:py-[100px] py-[50px] px-[44px] ">
+    <section className="relative bg-[#FBFBFB] xl:px-[100px] xl:py-[100px] py-[50px] px-[44px] ">
       <h1 className="mb-[12px] md:text-[36px] font-bold text-[24px] leading-[24px] md:leading-[44px] ">
         {work.title}
       </h1>
-      <p className="text-[14px] md:text-[22px] md:mb-[60px] mb-[40px] ">
+      <p className="text-[14px] xl:text-[22px] xl:mb-[60px] mb-[40px] ">
         {work.lead}
       </p>
-      <div className="text-left mt-[50px] md:mt-[120px] ">
+      <div className="text-left mt-[50px] xl:mt-[120px] lg:mt-[80px] ">
         <Link href="/work">
           <a className="btn10 hover-main group border border-solid border-gray2 text-white bg-dark hover:text-dark hover:bg-white inline-flex items-center justify-center font-bold text-[14px] md:text-[19px] py-[28px] md:w-[305px] w-[210px] mx-auto">
             <span className="mr-[12px]">{work.linkText}</span>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+            // @ts-ignore
 const Logo = ({ url }) => {
   return (
     <div>

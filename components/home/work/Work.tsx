@@ -12,7 +12,7 @@ export default function work() {
       isWork: true,
     },
     {
-      title: "I author and publish meaningful content regularly",
+      title: "I author meaningful content regularly",
       lead: "I write about Software Development, Tech, Career Tips, and Lifestyle.",
       link: "/articles",
       linkText: "Read my articles",
@@ -28,9 +28,12 @@ export default function work() {
         </h1>
       </div>
       <LineHoriz />
-      <div className="mt-[60px] flex items-center md:flex-row flex-col">
+      <div className="mt-[60px] lg:h-[550px] flex items-center md:flex-row flex-col">
         {items.map((item) => (
-          <div className=" md:mr-[20px] md:mb-0 odd:mb-[30px]" key={item.title}>
+          <div
+            className=" md:mr-[20px] h-full md:mb-0 md:odd:mb-0 odd:mb-[30px]"
+            key={item.title}
+          >
             <WorkCard work={item} />
           </div>
         ))}

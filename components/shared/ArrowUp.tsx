@@ -1,5 +1,5 @@
 import React from 'react'
-
+            // @ts-ignore
 export default function ArrowUp({ strokeColour, url }) {
     return (
         <a href={url} target="_blank" className="cursor-pointer hover:bg-red-300  w-[45px] h-[45px] flex items-center justify-center rounded-full" rel="noreferrer">

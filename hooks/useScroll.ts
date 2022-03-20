@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+// @ts-ignore
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 

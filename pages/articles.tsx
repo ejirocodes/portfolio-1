@@ -39,6 +39,7 @@ const Article: NextPage = () => {
       <main className="container-space md:pt-[160px]">
         <section>
           {content.map((article) => (
+            // @ts-ignore
             <CardArticle article={article} key={article.title} />
           ))}
           {

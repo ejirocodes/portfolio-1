@@ -50,6 +50,11 @@ export const NavMain = () => {
   const toggleNav = useNavUpdate();
 
   useEffect(() => {
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        console.log("esc");
+      }
+    });
     const onScroll = () => {
       const windowScroll = window.pageYOffset;
       if (windowScroll > 100) {
@@ -82,7 +87,14 @@ export const NavMain = () => {
         
         `}
         >
-          <div className="flex items-center">
+          <div
+            className="flex items-center"
+            onClick={() => {
+                          // @ts-ignore
+
+              toggleNav(false);
+            }}
+          >
             <Logo url="/" />
           </div>
 
@@ -90,7 +102,7 @@ export const NavMain = () => {
             className={`${
               isNav
                 ? "opacity-100 pt-[77px] "
-                : "opacity-0 h-0 transition-all w-0"
+                : "opacity-0  transition-all hidden"
             }`}
           >
             <ul className="flex items-center flex-col justify-center h-full">
@@ -99,6 +111,8 @@ export const NavMain = () => {
                   <Link href={navigation.url}>
                     <a
                       onClick={() => {
+                                    // @ts-ignore
+
                         toggleNav(false);
                       }}
                       className={`text-gray2 font-extrabold leading-none text-[130px] mb-[20px] flex items-center justify-center font-['NeueMachina'] transition ease-in-out duration-300 
@@ -154,6 +168,8 @@ export const NavMain = () => {
               }
               `}
               onClick={() => {
+                            // @ts-ignore
+
                 toggleNav(false);
               }}
             >
@@ -168,6 +184,8 @@ export const NavMain = () => {
               ${isNav ? "   !justify-start !pl-0 min-w-[auto] !pr-[107px]" : ""}
               `}
               onClick={() => {
+                            // @ts-ignore
+
                 toggleNav();
               }}
             >

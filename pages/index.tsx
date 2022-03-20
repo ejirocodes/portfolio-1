@@ -31,21 +31,21 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="md:pt-[137px] w-full">
-        <section className="flex lg:items-center huge:justify-center lg:justify-between  md:flex-row flex-col w-full container-space">
-          <div className="w-full md:w-1/2  2xl:w-auto mr-0 2xl:mr-[50px] md:mb-0 mb-[60px]">
-            <h1 className="font-extrabold font-['NeueMachina'] leading-none md:text-[110px] sm:text-[60px] text-[42px] mb-[20px]">
+        <section className="flex lg:items-center huge:justify-center lg:justify-between  !items-center md:flex-row flex-col w-full container-space">
+          <div className="w-full md:w-1/2  2xl:w-auto mr-0 2xl:mr-[50px] md:mr-[30px] md:mb-0 mb-[60px]">
+            <h1 className="font-extrabold font-['NeueMachina'] leading-none xl:text-[110px] lg:text-[80px] md:text-[68px] sm:text-[50px] text-[42px] mb-[20px]">
               <span className="mr-[8px]">Frontend</span>
               <br className="sm:hidden 2xl:inline xl:inline lg:inline md:inline" />
               Engineer.
             </h1>
-            <p className="lg:mb-[90px]  mb-[40px] w-full max-w-[538px] md:text-[22px] text-[14px] leading-[24px] md:leading-[40px]">
+            <p className="xl:mb-[90px] lg:mb-[50px]  mb-[40px] w-full max-w-[538px] lg:text-[18px] xl:text-[22px] text-[14px] leading-[24px] md:leading-[40px]">
               Hello, Ejiro Asiuwhu here. I focused on developing premium web
               experiences through the lens of design thinking, web performance,
               accessibility, interaction{" "}
             </p>
             <a
               href=""
-              className="font-bold flex group md:text-[24px] text-[12px]  items-center "
+              className="font-bold flex group xl:text-[24px] lg:text-[18px] text-[12px]  items-center "
             >
               <span className="inline-flex mr-[17px] icon-hover md:after:h-[2px]  after:h-[1px] md:after:bottom-[3px]  after:bottom-[1px]  link-hover">
                 What brought you to Code Lord?
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
               </span>
             </a>
           </div>
-          <div className="w-full md:w-1/2 ml-0 2xl:ml-[50px]  2xl:w-auto  flex justify-end items-center flex-col">
+          <div className="w-full md:w-auto ml-0 2xl:ml-[50px]  2xl:w-auto  flex justify-end items-center flex-col">
             <img
               src="/img/ejiro-asiuwhu.webp"
               alt="Ejiro Asiuwhu"

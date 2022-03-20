@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Article } from "../types/interface";
 import ArrowUp from "./shared/ArrowUp";
-
+            // @ts-ignore
 const CardArticle: React.FC<Article> = ({ article }) => {
   return (
     <article

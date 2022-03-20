@@ -1,5 +1,6 @@
 import React from "react";
 
+// @ts-ignore
 export default function EndorsementCard({ endorsement }) {
   return (
     <figure className="bg-[#F7F7F7] md:text-[14px] text-[12px] flex flex-col justify-between md:py-[30px] md:px-[38px] p-[20px] md:w-[509px] w-[321px]  md:h-[280px] h-full md:min-h-auto min-h-[220px]">

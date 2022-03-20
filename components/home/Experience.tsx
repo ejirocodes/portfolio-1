@@ -5,7 +5,7 @@ export default function Experience() {
     <section className="container-space container-mb">
       <div className="md:mb-[40px] mb-[25px]  tech-container">
         <span className="invisible flex">0</span>
-        <h1 className="stroke-heading  md:w-1/2">
+        <h1 className="stroke-heading w-full  xl:w-1/2">
           <span className="stroke-text stroke">03.</span>
           <span className="md:text-[60px] text-[40px]">Experience</span>
         </h1>
