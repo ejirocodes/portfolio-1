@@ -13,12 +13,12 @@ export const socials: Social[] = [
   },
   {
     title: "LN",
-    url: "https://www.linkedin.com/in/ejiro-asiuhwu",
+    url: "https://www.linkedin.com/in/ejiro-asiuwhu",
     arialLabel: "Ejiro on LinkedIn",
   },
   {
     title: "MD",
-    url: "https://www.medium.com/ejirocodes",
+    url: "https://medium.com/ejirocodes",
     arialLabel: "Ejiro on Medium",
   },
   {
