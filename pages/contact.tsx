@@ -1,3 +1,5 @@
+import Newsletter from "../components/article/Newsletter";
+
 export default function Contact() {
   return (
     <section className="container-space">
@@ -80,6 +82,9 @@ export default function Contact() {
           ></textarea>
         </div>
       </form>
+      <div className="lg:mt-[150px] mt-[100px] lg:mb-[100px] mb-[100px]   ">
+        <Newsletter />
+      </div>
     </section>
   );
 }
