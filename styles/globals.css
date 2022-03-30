@@ -51,7 +51,8 @@
   .project-card {
     @apply grid grid-cols-3 gap-4 py-[120px] px-[96px] bg-[#F7F7F7];
   }
-  input {
+  input,
+  textarea {
     @apply focus-visible:border-none focus-visible:outline-none focus-visible:shadow-none;
   }
   button {
@@ -272,20 +273,15 @@ a:hover {
   position: absolute;
 } */
 
-
-
-body::-webkit-scrollbar-track
-{
-	background-color: transparent;
+body::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
-body::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #fbfbfb;
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fbfbfb;
 }
 
-body::-webkit-scrollbar-thumb
-{
-	background-color: #111111;	
+body::-webkit-scrollbar-thumb {
+  background-color: #111111;
 }
