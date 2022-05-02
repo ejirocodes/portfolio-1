@@ -80,7 +80,6 @@ export const NavMain = () => {
   }
 
   function handleNavigation() {
-    console.log(window.innerWidth);
     if (window.innerWidth > 768) {
       return toggleNav();
     }
