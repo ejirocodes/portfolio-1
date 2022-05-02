@@ -2,7 +2,7 @@ import LineHoriz from "../shared/LineHoriz";
 
 export default function TechStack() {
   return (
-    <section className="container-space md:my-[150px] my-[100px]">
+    <section className="container-space md:my-[150px] my-[100px] contain-main">
       <div className="md:mb-[40px] mb-[25px]  tech-container">
         <span className="invisible flex">0</span>
         <h1 className="stroke-heading  md:w-1/2">

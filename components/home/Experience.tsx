@@ -2,7 +2,7 @@ import LineHoriz from "../shared/LineHoriz";
 
 export default function Experience() {
   return (
-    <section className="container-space container-mb">
+    <section className="container-space container-mb contain-main">
       <div className="md:mb-[40px] mb-[25px]  tech-container">
         <span className="invisible flex">0</span>
         <h1 className="stroke-heading w-full  xl:w-1/2">
@@ -127,8 +127,10 @@ export default function Experience() {
           </div>
         </div>
         <div className="md:text-center text-left mt-[50px] md:mt-[120px] ">
-          <button className=" btn10 hover-main group border border-solid border-gray2 text-white bg-dark md:px-[50px] hover:text-dark hover:bg-white inline-flex items-center 
-          justify-center font-bold md:text-[22px] text[14px] md:py-[32px] py-[15px] px-[20px] ">
+          <button
+            className=" btn10 hover-main group border border-solid border-gray2 text-white bg-dark md:px-[50px] hover:text-dark hover:bg-white inline-flex items-center 
+          justify-center font-bold md:text-[22px] text[14px] md:py-[32px] py-[15px] px-[20px] "
+          >
             <span className="mr-[12px]">Download Résumé</span>
             <span>
               <svg

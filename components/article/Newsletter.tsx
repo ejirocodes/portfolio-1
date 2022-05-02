@@ -1,12 +1,12 @@
 const Newsletter = () => {
   return (
-    <section className="bg-[#FBFBFB] text-center md:px-[180px] px-[58px] md:pt-[105px] pt-[43px] pb-[48px] md:pb-[121px]">
+    <section className="bg-[#FBFBFB] text-center md:px-[180px] px-[58px] md:pt-[105px] pt-[43px] pb-[48px] md:pb-[121px] contain-main">
       <h1 className="md:mb-[19px] mb-[6px] leading-[20px] text-dark lg:text-[42px] md:text-[38px] sm:text-[20px] text-[18px]  md:leading-[48px] font-bold ">
         Ejiro Asiuhwu&apos;s Newsletter
       </h1>
       <p className="md:mb-[57px] mx-auto mb-[30px] text-gray5 md:text-[22px] text-[10px] leading-[16px] md:leading-[35px]">
-        A monthly newsletter where I share resources around Tech,
-        Career and Lifestyle. No spam, unsubscribe at any time.
+        A monthly newsletter where I share resources around Tech, Career and
+        Lifestyle. No spam, unsubscribe at any time.
       </p>
       <form className="flex items-center justify-center md:h-[87px] h-[40px] md:mb-[60px] mb-[40px]">
         <input
