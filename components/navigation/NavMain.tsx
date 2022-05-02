@@ -81,6 +81,7 @@ export const NavMain = () => {
 
   function handleNavigation() {
     if (window.innerWidth > 768) {
+      // @ts-ignore
       return toggleNav();
     }
     openModal();
