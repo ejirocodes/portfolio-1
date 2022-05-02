@@ -11,7 +11,7 @@ const Tabs = dynamic(
 import "react-tabs/style/react-tabs.css";
 import Newsletter from "../components/article/Newsletter";
 import { ProjectCard } from "../components/project/ProjectCard";
-import { projects } from "../data/projects";
+import projects from "../data/projects.json";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Draggable } from "gsap/dist/Draggable";
@@ -128,7 +128,7 @@ const Work = () => {
     //   .addEventListener("click", () =>
     //     scrollToOffset(scrub.vars.offset - spacing)
     //   );
-            // @ts-ignore
+    // @ts-ignore
 
     function buildSeamlessLoop(items, spacing, animateFunc) {
       let rawSequence = gsap.timeline({ paused: true }), // this is where all the "real" animations live
@@ -145,7 +145,7 @@ const Work = () => {
           },
         }),
         cycleDuration = spacing * items.length,
-                    // @ts-ignore
+        // @ts-ignore
 
         dur; // the duration of just one animateFunc() (we'll populate it in the .forEach() below...
 
@@ -153,12 +153,12 @@ const Work = () => {
       items
         .concat(items)
         .concat(items)
-                    // @ts-ignore
+        // @ts-ignore
 
         .forEach((item, i) => {
           let anim = animateFunc(items[i % items.length]);
           rawSequence.add(anim, i * spacing);
-                      // @ts-ignore
+          // @ts-ignore
 
           dur || (dur = anim.duration());
         });
@@ -167,7 +167,7 @@ const Work = () => {
       seamlessLoop.fromTo(
         rawSequence,
         {
-                      // @ts-ignore
+          // @ts-ignore
 
           time: cycleDuration + dur / 2,
         },

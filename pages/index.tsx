@@ -8,7 +8,7 @@ import { gsap } from "gsap/dist/gsap";
 import { Cursor } from "../animation/cursor";
 import useScroll from "../hooks/useScroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-import { socials } from "../data/social";
+import socials from "../data/social.json";
 // import About from "../components/home/About";
 import TextHoriz from "../components/shared/TextHoriz";
 import TechStack from "../components/home/TechStack";

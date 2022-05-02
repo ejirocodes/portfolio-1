@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import Logo from "./Logo";
 import NavOpen from "./NavOpen";
 import { useNav, useNavUpdate } from "../../context/navContext";
-import { socials } from "../../data/social";
+import socials from "../../data/social.json";
 
 export const NavMain = () => {
   const navigations = [

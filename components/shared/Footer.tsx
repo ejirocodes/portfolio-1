@@ -1,4 +1,4 @@
-import { socials } from "../../data/social";
+import socials from "../../data/social.json";
 
 export const Footer = () => {
   return (
