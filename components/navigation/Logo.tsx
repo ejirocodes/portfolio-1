@@ -5,9 +5,9 @@ const Logo = ({ url }) => {
   return (
     <div>
       <Link href={url}>
-        <a title="Ejiro Asiuwhu" className=" flex items-center">
+        <a title="Ejiro Asiuwhu" className="flex items-center">
           <svg
-            className="sm:mr-[8px] mr-[4px] sm:w-[16px] w-[10px] h-[12px]"
+            className="md:mr-[8px] mr-[4px] md:w-[16px] w-[8px] h-[12px] md:h-[24px] sm:w-[12px] sm:h-[20px]"
             viewBox="0 0 19 27"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@ const Logo = ({ url }) => {
               fill="#666666"
             />
           </svg>
-          <p className="font-extrabold sm:text-[28px] text-base font-['NeueMachina']">
+          <p className="font-extrabold md:text-[28px] sm:text-xl text-base font-['NeueMachina']">
             EjiroCode
           </p>
         </a>
