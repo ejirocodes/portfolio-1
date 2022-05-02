@@ -65,7 +65,7 @@ const Home: NextPage = () => {
               href=""
               className="font-bold flex group xl:text-[24px] lg:text-[18px] text-[12px]  items-center "
             >
-              <span className="inline-flex mr-[17px] icon-hover md:after:h-[2px]  after:h-[1px] md:after:bottom-[3px]  after:bottom-[1px]  link-hover">
+              <span className="inline-flex mr-[17px] icon-hover md:after:h-[2px]  after:h-[1px] md:after:bottom-[0]  after:bottom-[1px]  link-hover">
                 What brought you to Code Lord?
               </span>
               <span className=" icon-hover">
@@ -88,14 +88,8 @@ const Home: NextPage = () => {
           </div>
           <div className="w-full md:w-auto ml-0 2xl:ml-[50px]  2xl:w-auto  flex justify-end items-center flex-col">
             <picture className="lg:mb-[50px] mb-[30px]">
-              <source
-                srcSet="/img/ejiro-asiuwhu.webp"
-                type="image/webp"
-              />
-              <source
-                srcSet="/img/ejiro-asiuwhu.png"
-                type="image/png"
-              />
+              <source srcSet="/img/ejiro-asiuwhu.webp" type="image/webp" />
+              <source srcSet="/img/ejiro-asiuwhu.png" type="image/png" />
               <img src="/img/ejiro-asiuwhu.png" alt="Ejiro Asiuwhu" />
             </picture>
             <ul className="flex items-center">

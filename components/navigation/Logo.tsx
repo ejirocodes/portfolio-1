@@ -1,15 +1,13 @@
 import Link from "next/link";
 
-            // @ts-ignore
+// @ts-ignore
 const Logo = ({ url }) => {
   return (
     <div>
       <Link href={url}>
         <a title="Ejiro Asiuwhu" className=" flex items-center">
           <svg
-            className="mr-[8px]"
-            width="19"
-            height="27"
+            className="sm:mr-[8px] mr-[4px] sm:w-[16px] w-[10px] h-[12px]"
             viewBox="0 0 19 27"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +19,7 @@ const Logo = ({ url }) => {
               fill="#666666"
             />
           </svg>
-          <p className="font-extrabold text-[28px] font-['NeueMachina']">
+          <p className="font-extrabold sm:text-[28px] text-base font-['NeueMachina']">
             EjiroCode
           </p>
         </a>

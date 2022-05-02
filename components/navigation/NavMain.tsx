@@ -120,20 +120,20 @@ export const NavMain = () => {
               ))}
             </ul>
             <ul className="flex items-center justify-center border-t border-gray2 py-[66px]  ">
-                {socials.map((social) => (
-                  <li key={social.title}>
-                    <a
-                      href={social.url}
-                      aria-label={social.arialLabel}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mr-[60px] text-gray2 font-extrabold text-[27px]"
-                    >
-                      {social.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              {socials.map((social) => (
+                <li key={social.title}>
+                  <a
+                    href={social.url}
+                    aria-label={social.arialLabel}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-[60px] text-gray2 font-extrabold text-[27px]"
+                  >
+                    {social.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </section>
 
           <div
@@ -152,7 +152,7 @@ export const NavMain = () => {
                   <li key={navigation.title} className="h-full">
                     <Link href={navigation.url}>
                       <a
-                        className={`text-dark border-r border-r-gray3 h-full w-[177px] flex items-center justify-center font-['NeueMachina'] hover:bg-[#FBFBFB] hover:text-dark transition ease-in-out duration-300 
+                        className={`text-dark border-r border-r-gray3 h-full xl:w-[177px] lg:w-[140px] md:w-[120px] flex items-center justify-center font-['NeueMachina'] hover:bg-[#FBFBFB] hover:text-dark transition ease-in-out duration-300 
                     ${router.pathname === navigation.url && "active-link"}
                     `}
                       >
@@ -163,8 +163,6 @@ export const NavMain = () => {
                 ))}
               </ul>
             </div>
-              
-
 
             {/* {isNav && ( */}
 
@@ -192,7 +190,11 @@ export const NavMain = () => {
               aria-label={isNav ? "Close menu" : "Open menu"}
               role="navigation"
               className={`inline-flex cursor-pointer items-end transition-all justify-center flex-col px-[50px] min-w-[157px] 
-              ${isNav ? " mt-[20px]   !justify-start !pl-0 min-w-[auto] !pr-[50px]" : ""}
+              ${
+                isNav
+                  ? " mt-[20px]   !justify-start !pl-0 min-w-[auto] !pr-[50px]"
+                  : ""
+              }
               `}
               onClick={() => {
                 // @ts-ignore
