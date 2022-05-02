@@ -152,6 +152,7 @@ export const NavMain = () => {
                   <li key={navigation.title} className="h-full">
                     <Link href={navigation.url}>
                       <a
+                        title={navigation.title}
                         className={`text-dark border-r border-r-gray3 h-full xl:w-[177px] lg:w-[140px] md:w-[120px] flex items-center justify-center font-['NeueMachina'] hover:bg-[#FBFBFB] hover:text-dark transition ease-in-out duration-300 
                     ${router.pathname === navigation.url && "active-link"}
                     `}

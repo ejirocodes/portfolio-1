@@ -1,7 +1,6 @@
-import Image from "next/image";
 import { Article } from "../types/interface";
 import ArrowUp from "./shared/ArrowUp";
-            // @ts-ignore
+// @ts-ignore
 const CardArticle: React.FC<Article> = ({ article }) => {
   return (
     <article
@@ -11,10 +10,12 @@ const CardArticle: React.FC<Article> = ({ article }) => {
       <div className="">
         <article className="md:pb-[50px] pb-[30px] border-b-[0.5px] border-solid border-[gray3] ">
           <div className="md:px-[80px] px-[30px] ">
-            <h2 className="text-dark md:mb-[39px]
+            <h2
+              className="text-dark md:mb-[39px]
              mb-[19px] md:text-[20px] text-[10px] 
              md:leading-[41px] leading-[12px] font-extrabold md:tracking-[4px] tracking-[0.27em]
-             uppercase group-hover:text-white">
+             uppercase group-hover:text-white"
+            >
               {article.tech}
             </h2>
             <h1 className="text-dark md:text-[34px] text-[16px]  mb-[10px]  md:leading-[34px] leading-[19px]  font-extrabold md:mb-[12px]">
@@ -45,8 +46,7 @@ const CardArticle: React.FC<Article> = ({ article }) => {
             />
           </div>
           <div className="md:w-[15px] w-[8px] ">
-          <ArrowUp strokeColour="#111111" url={article.url} />
-
+            <ArrowUp strokeColour="#111111" url={article.url} />
           </div>
         </article>
       </div>
