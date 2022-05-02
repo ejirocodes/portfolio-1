@@ -74,7 +74,7 @@ export const NavMain = () => {
       <nav
         aria-label="Main menu"
         id="main-menu"
-        className={`flex  items-center  md:h-[100px] h-[70px] opacity-100 w-full bg-[#ffffff] fixed transition-all ease-linear top-0 z-20 justify-between md:pl-[50px] pl-[35px] border-b border-b-gray3
+        className={`flex items-center md:shadow-none drop-shadow-[0_10px_104px_rgba(0,0,0,0.25)] md:h-[100px] h-[70px] opacity-100 w-full bg-[#ffffff] fixed transition-all ease-linear top-0 z-20 justify-between md:pl-[50px] pl-[35px] md:border-b border-b-gray3
 
       ${
         navStyle ? "active-nav" : "backdrop-saturate-[100%] backdrop-blur-[0px]"
