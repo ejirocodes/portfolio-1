@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, Fragment } from "react";
 import Logo from "./Logo";
 import NavOpen from "./NavOpen";
 import { useNav, useNavUpdate } from "../../context/navContext";
 import socials from "../../data/social.json";
+import MobileNavOpen from "./MobileNavOpen";
+import { Dialog, Transition } from "@headlessui/react";
 
 export const NavMain = () => {
   const navigations = [
@@ -49,6 +51,7 @@ export const NavMain = () => {
   const [navStyle, setNavStyle] = useState(false);
   const isNav = useNav();
   const toggleNav = useNavUpdate();
+  const [isOpen, setIsOpen] = useState(true);
 
   useEffect(() => {
     document.addEventListener("keydown", function (event) {
@@ -68,8 +71,110 @@ export const NavMain = () => {
     window.addEventListener("scroll", onScroll);
   }, [navStyle, isNav]);
 
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
   return (
     <>
+      <>
+        <div className="fixed inset-0 flex items-center justify-center">
+          <button
+            type="button"
+            onClick={openModal}
+            className="focus:outline-none rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+          >
+            Open dialog
+          </button>
+        </div>
+
+        <Transition appear show={isOpen} as={Fragment}>
+          <Dialog as="div" className="relative z-50" onClose={closeModal}>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <div className="fixed inset-0 bg-black bg-opacity-25" />
+            </Transition.Child>
+
+            <div className="fixed inset-0 overflow-y-auto">
+              <div className="flex min-h-full items-center justify-end  text-center">
+                <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0 scale-95"
+                  enterTo="opacity-100 scale-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100 scale-100"
+                  leaveTo="opacity-0 scale-95"
+                >
+                  <Dialog.Panel className="w-[85vw] flex flex-col justify-between transform overflow-hidden h-screen bg-white text-left align-middle shadow-xl transition-all">
+                    {/* <div className="flex flex-col justify-end items-end"> */}
+
+                    <section>
+                      <div className="flex items-end justify-end p-7">
+                        <button>
+                          <img src="/img/close.svg" alt="Close" />
+                        </button>
+                      </div>
+                      <div className="mt-[70px] pl-[48px]">
+                        <ul className="flex flex-col justify-center h-full">
+                          {navigations.map((navigation) => (
+                            <li key={navigation.title} className="h-full">
+                              <Link href={navigation.url}>
+                                <a
+                                  onClick={() => {
+                                    // @ts-ignore
+
+                                    toggleNav(false);
+                                  }}
+                                  className={`text-gray2 font-extrabold leading-none text-[50px] mb-[20px] flex font-['NeueMachina'] transition ease-in-out duration-300 
+                    ${router.pathname === navigation.url && "!text-dark"}
+                    `}
+                                >
+                                  {navigation.title}
+                                </a>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </section>
+
+                    <div className="">
+                      <ul className="flex items-center py-10 pl-[48px] border-gray3 border-t-[0.3px] ">
+                        {socials.map((social) => (
+                          <li key={social.title}>
+                            <a
+                              href={social.url}
+                              aria-label={social.arialLabel}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="mr-[20px] text-gray2 font-extrabold text-[16px]"
+                            >
+                              {social.title}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    {/* </div> */}
+                  </Dialog.Panel>
+                </Transition.Child>
+              </div>
+            </div>
+          </Dialog>
+        </Transition>
+      </>
+      {/* <MobileNavOpen /> */}
       {/* {isNav && <NavOpen />} */}
       <nav
         aria-label="Main menu"

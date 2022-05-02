@@ -204,9 +204,9 @@ const Work = () => {
           /Work
         </h1>
         <p className="text-[22px]">
-          I have written over a billion lines of code, hahaha... just kidding,
+          I have written over a billion lines of code... just kidding,
           <br /> But trust me, I&apos;ve built awesome products that I
-          can&apos;t show you cos of NDA 👀
+          can&apos;t show you 👀
         </p>
       </header>
       <section>
