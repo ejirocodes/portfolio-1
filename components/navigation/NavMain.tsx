@@ -52,8 +52,9 @@ export const NavMain = () => {
 
   useEffect(() => {
     document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
+      if (event.key === "Escape" && isNav) {
         console.log("esc");
+        // toggleNav(false);
       }
     });
     const onScroll = () => {
@@ -65,7 +66,7 @@ export const NavMain = () => {
       }
     };
     window.addEventListener("scroll", onScroll);
-  }, [navStyle]);
+  }, [navStyle, isNav]);
 
   return (
     <>
@@ -73,7 +74,7 @@ export const NavMain = () => {
       <nav
         aria-label="Main menu"
         id="main-menu"
-        className={`flex  items-center  h-[100px] opacity-100 w-full bg-[#ffffff] fixed transition-all ease-linear top-0 z-20 justify-between pl-[50px] border-b border-b-gray3
+        className={`flex  items-center  md:h-[100px] h-[70px] opacity-100 w-full bg-[#ffffff] fixed transition-all ease-linear top-0 z-20 justify-between md:pl-[50px] pl-[35px] border-b border-b-gray3
 
       ${
         navStyle ? "active-nav" : "backdrop-saturate-[100%] backdrop-blur-[0px]"
@@ -82,7 +83,7 @@ export const NavMain = () => {
       `}
       >
         <div
-          className={`flex  items-center  justify-between w-full  h-[100px] 
+          className={`flex  items-center  justify-between w-full md:h-[100px] h-[70px]
 
         ${isNav ? "!items-start !h-full  pt-[36px] w-full" : ""}
         
@@ -147,7 +148,7 @@ export const NavMain = () => {
             
             `}
             >
-              <ul className="flex items-center justify-center h-full">
+              <ul className="md:flex hidden items-center justify-center h-full">
                 {navigations.map((navigation) => (
                   <li key={navigation.title} className="h-full">
                     <Link href={navigation.url}>
@@ -190,7 +191,7 @@ export const NavMain = () => {
               aria-controls="main-menu"
               aria-label={isNav ? "Close menu" : "Open menu"}
               role="navigation"
-              className={`inline-flex cursor-pointer items-end transition-all justify-center flex-col px-[50px] min-w-[157px] 
+              className={`inline-flex cursor-pointer items-end transition-all md:bg-transparent bg-dark justify-center flex-col md:px-[50px] px-[35px]  md:min-w-[157px] md:w-[157px] w-[94px] 
               ${
                 isNav
                   ? " mt-[20px]   !justify-start !pl-0 min-w-[auto] !pr-[50px]"
@@ -203,12 +204,13 @@ export const NavMain = () => {
                 toggleNav();
               }}
             >
+              {/* <div> */}
               <span
-                className={`bg-dark w-[57px] mb-[8px] h-[3px] inline-flex
+                className={`md:bg-dark bg-white md:w-[57px] w-[24px] mb-[8px] h-[3px] inline-flex
               
               ${
                 isNav
-                  ? `transition ease-in-out duration-300 -rotate-45  z-50   !mb-0
+                  ? `transition ease-in-out duration-300 -rotate-45  z-50 !mb-0
               !w-[35px]
               absolute       `
                   : ""
@@ -216,7 +218,7 @@ export const NavMain = () => {
               `}
               ></span>
               <span
-                className={`bg-dark w-[35px] h-[3px] inline-flex
+                className={`md:bg-dark bg-white md:w-[35px] w-[14px] h-[3px] inline-flex
 
                           ${
                             isNav
@@ -228,6 +230,7 @@ export const NavMain = () => {
             
             `}
               ></span>
+              {/* </div> */}
             </button>
           </div>
         </div>

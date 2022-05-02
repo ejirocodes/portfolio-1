@@ -10,7 +10,7 @@ export function useNav() {
 export function useNavUpdate() {
   return useContext(NavUpdateContext);
 }
-            // @ts-ignore
+// @ts-ignore
 export function NavProvider({ children }) {
   const [isNav, setIsNav] = useState(false);
 
@@ -20,7 +20,7 @@ export function NavProvider({ children }) {
   }
   return (
     <NavContext.Provider value={isNav}>
-                  {/*  @ts-ignore */}
+      {/*  @ts-ignore */}
       <NavUpdateContext.Provider value={toggleNav}>
         {children}
       </NavUpdateContext.Provider>
