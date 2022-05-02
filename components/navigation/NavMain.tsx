@@ -51,7 +51,7 @@ export const NavMain = () => {
   const [navStyle, setNavStyle] = useState(false);
   const isNav = useNav();
   const toggleNav = useNavUpdate();
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     document.addEventListener("keydown", function (event) {
@@ -78,19 +78,17 @@ export const NavMain = () => {
   function openModal() {
     setIsOpen(true);
   }
+
+  function handleNavigation() {
+    console.log(window.innerWidth);
+    if (window.innerWidth > 768) {
+      return toggleNav();
+    }
+    openModal();
+  }
   return (
     <>
       <>
-        <div className="fixed inset-0 flex items-center justify-center">
-          <button
-            type="button"
-            onClick={openModal}
-            className="focus:outline-none rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-          >
-            Open dialog
-          </button>
-        </div>
-
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog as="div" className="relative z-50" onClose={closeModal}>
             <Transition.Child
@@ -121,7 +119,7 @@ export const NavMain = () => {
 
                     <section>
                       <div className="flex items-end justify-end p-7">
-                        <button>
+                        <button onClick={closeModal} title="Close navigation">
                           <img src="/img/close.svg" alt="Close" />
                         </button>
                       </div>
@@ -303,11 +301,7 @@ export const NavMain = () => {
                   : ""
               }
               `}
-              onClick={() => {
-                // @ts-ignore
-
-                toggleNav();
-              }}
+              onClick={handleNavigation}
             >
               {/* <div> */}
               <span
