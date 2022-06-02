@@ -57,15 +57,12 @@ export const Footer = () => {
             </a>
             <span>
               by{" "}
-              <a
-                href="https://www.linkedin.com/in/augustine-asiuwhu/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
                 className="underline"
                 aria-label="Augustine Asiuwhu on LinkedIn"
               >
                 Augustine
-              </a>
+              </span>
             </span>
           </p>
         </div>

@@ -28,7 +28,7 @@ export default function TechStack() {
         </div>
         <div className="">
           <div className="tech-container">
-            <h2 className="tech-title">Others Stacks</h2>
+            <h2 className="tech-title">Frameworks &amp; Tools</h2>
             <p
               className="md:text-[22px]  text-[14px] md:w-[50%] md:pr-[20px] "
               aria-label="Ejiro Asiuwhu Programming Languages"
@@ -55,7 +55,7 @@ export default function TechStack() {
         </div>
         <div className="">
           <div className="tech-container">
-            <h2 className="tech-title">Others Stacks</h2>
+            <h2 className="tech-title">Others</h2>
             <p
               className="md:text-[22px]  text-[14px] md:w-[50%] md:pr-[20px] "
               aria-label="Ejiro Asiuwhu Programming Languages"

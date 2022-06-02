@@ -9,13 +9,11 @@ import { Cursor } from "../animation/cursor";
 import useScroll from "../hooks/useScroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import socials from "../data/social.json";
-// import About from "../components/home/About";
 import TextHoriz from "../components/shared/TextHoriz";
 import TechStack from "../components/home/TechStack";
 import Experience from "../components/home/Experience";
 import Endorsement from "../components/home/endorsement/Endorsement";
 import Work from "../components/home/work/Work";
-// import Newsletter from "../components/article/Newsletter";
 import Quote from "../components/home/Quote";
 
 import dynamic from "next/dynamic";
@@ -86,12 +84,30 @@ const Home: NextPage = () => {
               </span>
             </a>
           </div>
+
           <div className="w-full md:w-auto ml-0 2xl:ml-[50px]  2xl:w-auto  flex justify-end items-center flex-col">
-            <picture className="lg:mb-[50px] mb-[30px]">
-              <source srcSet="/img/ejiro-asiuwhu.webp" type="image/webp" />
-              <source srcSet="/img/ejiro-asiuwhu.png" type="image/png" />
-              <img src="/img/ejiro-asiuwhu.png" alt="Ejiro Asiuwhu" />
+            <picture>
+              {/* Large */}
+              <source
+                srcSet="https://res.cloudinary.com/ejiro/image/upload/v1654204394/portfolio-site/ejiro-asiuwhu_xcd2qx.png"
+                media="(min-width: 75em)"
+              />
+
+              {/* Small */}
+              <source
+                srcSet="https://res.cloudinary.com/ejiro/image/upload/v1654204394/portfolio-site/ejiro-asiuwhu_kemvml.webp"
+                media="(min-width: 20em)"
+              />
+              <img
+                src="https://res.cloudinary.com/ejiro/image/upload/v1654204394/portfolio-site/ejiro-asiuwhu_kemvml.webp"
+                loading="lazy"
+                alt="Ejiro Asiuwhu"
+                decoding="async"
+                srcSet="https://res.cloudinary.com/ejiro/image/upload/v1654204394/portfolio-site/ejiro-asiuwhu_kemvml.webp 1x,
+      https://res.cloudinary.com/ejiro/image/upload/v1654204394/portfolio-site/ejiro-asiuwhu_xcd2qx.png 2x"
+              />
             </picture>
+
             <ul className="flex items-center">
               {socials.map((social) => (
                 <li key={social.title}>
