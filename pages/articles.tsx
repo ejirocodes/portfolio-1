@@ -1,28 +1,19 @@
-import { NextPage } from "next";
-import { useEffect, useState } from "react";
+import type { GetStaticProps, InferGetStaticPropsType } from "next";
+import { useState } from "react";
 import Head from "next/head";
 import Newsletter from "../components/article/Newsletter";
 import CardArticle from "../components/CardArticle";
-import articles from "../data/article.json";
+import articleData from "../data/article.json";
 import { Article } from "../types/interface";
 
-// export const getStaticProps = async () => {
-//   const res = await fetch("https://jsonplaceholder.typicode.com/users");
-//   const data = await res.json();
-
-//   return {
-//     props: {
-//       people: data,
-//     },
-//   };
-// };
-
-interface ArticleProps {
+interface ArticleState {
   article: Article[];
 }
 
-const Article: NextPage = () => {
-  const [content, setContent] = useState<ArticleProps["article"]>(
+const Article = ({
+  articles,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const [content, setContent] = useState<ArticleState["article"]>(
     articles.slice(0, 6)
   );
   const [isShow, setIsShow] = useState(false);
@@ -36,10 +27,6 @@ const Article: NextPage = () => {
       setContent(articles.slice(0, 6));
     }
   };
-
-  // useEffect( async () => {
-  //   const data = await fetch(articles)
-  // }, []);
 
   return (
     <>
@@ -60,6 +47,11 @@ const Article: NextPage = () => {
           </p>
         </div>
       </header>
+      {/* {{ people }}
+      {article.map((person) => (
+        <p key={person.title}>{person.title}</p>
+      ))} */}
+
       <main className=" lg:px-[120px] px-[18px] md:pt-[160px] pt-[45px]">
         <section>
           {content.map((article) => (
@@ -111,4 +103,13 @@ const Article: NextPage = () => {
     </>
   );
 };
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      articles: articleData,
+    },
+  };
+};
+
 export default Article;
