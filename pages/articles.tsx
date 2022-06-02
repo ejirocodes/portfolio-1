@@ -3,10 +3,28 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import Newsletter from "../components/article/Newsletter";
 import CardArticle from "../components/CardArticle";
-import articles  from "../data/article.json";
+import articles from "../data/article.json";
+import { Article } from "../types/interface";
+
+// export const getStaticProps = async () => {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/users");
+//   const data = await res.json();
+
+//   return {
+//     props: {
+//       people: data,
+//     },
+//   };
+// };
+
+interface ArticleProps {
+  article: Article[];
+}
 
 const Article: NextPage = () => {
-  const [content, setContent] = useState(articles.slice(0, 6));
+  const [content, setContent] = useState<ArticleProps["article"]>(
+    articles.slice(0, 6)
+  );
   const [isShow, setIsShow] = useState(false);
 
   const toggleArticles = () => {
@@ -19,6 +37,10 @@ const Article: NextPage = () => {
     }
   };
 
+  // useEffect( async () => {
+  //   const data = await fetch(articles)
+  // }, []);
+
   return (
     <>
       <Head>
@@ -30,7 +52,9 @@ const Article: NextPage = () => {
       </Head>
       <header className="bg-hero-article md:h-[590px] h-[222px] w-full bg-cover bg-top flex items-center justify-center">
         <div className="text-center text-white ">
-          <h1 className="md:text-[91px] text-[34px] leading-none font-extrabold">Articles</h1>
+          <h1 className="md:text-[91px] text-[34px] leading-none font-extrabold">
+            Articles
+          </h1>
           <p className="uppercase md:text-[20px] text-[8px]  font-medium md:tracking-[4px] tracking-[0.27em]">
             By Ejiro AsiuwHu
           </p>
@@ -39,7 +63,6 @@ const Article: NextPage = () => {
       <main className=" lg:px-[120px] px-[18px] md:pt-[160px] pt-[45px]">
         <section>
           {content.map((article) => (
-            // @ts-ignore
             <CardArticle article={article} key={article.title} />
           ))}
           {
@@ -51,14 +74,14 @@ const Article: NextPage = () => {
                 text-white bg-dark hover:text-dark 
                 hover:bg-white inline-flex items-center justify-center 
                 font-bold lg:text-[22px] md:text-[18px] text-[10px] py-[28px] md:w-[310px] w-[153px] md:h-[91px] 
-                h-[50px] mx-auto" 
+                h-[50px] mx-auto"
               >
                 <span
                   className="inline-block 
               
                   
                   "
-                  >
+                >
                   {/* // mr-[13px] */}
                   {!isShow ? "See more articles" : "See less articles"}
                 </span>

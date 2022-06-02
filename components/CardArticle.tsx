@@ -1,7 +1,12 @@
 import { Article } from "../types/interface";
 import ArrowUp from "./shared/ArrowUp";
-// @ts-ignore
-const CardArticle: React.FC<Article> = ({ article }) => {
+import React from "react";
+
+interface ArticleProps {
+  article: Article;
+}
+
+const CardArticle: React.FC<ArticleProps> = ({ article }) => {
   return (
     <a
       href={article.url}
