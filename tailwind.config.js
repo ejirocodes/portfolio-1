@@ -21,8 +21,10 @@ module.exports = {
         gray3: "#999999",
       },
       backgroundImage: {
-        "hero-article": "url('/img/ejiro-banner.png')",
-        "hero-quote": "url('/img/banner-sec.png')",
+        "hero-article":
+          "url('https://res.cloudinary.com/ejiro/image/upload/f_auto/v1654206071/portfolio-site/ejiro-banner_jhyyrs.png')",
+        "hero-quote":
+          "url('https://res.cloudinary.com/ejiro/image/upload/f_auto/v1654206503/portfolio-site/banner-sec_zasvtn.png')",
       },
     },
   },
