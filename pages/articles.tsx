@@ -6,14 +6,14 @@ import CardArticle from "../components/CardArticle";
 import articleData from "../data/article.json";
 import { Article } from "../types/interface";
 
-interface ArticleState {
+interface IState {
   article: Article[];
 }
 
 const Article = ({
   articles,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const [content, setContent] = useState<ArticleState["article"]>(
+  const [content, setContent] = useState<IState["article"]>(
     articles.slice(0, 6)
   );
   const [isShow, setIsShow] = useState(false);

@@ -1,10 +1,20 @@
 import React from "react";
 import LineHoriz from "../../shared/LineHoriz";
-import EndorsementCard from "./EndorsementCard";
+import RecommendationCard from "./RecommendationCard";
 import Marquee from "react-fast-marquee";
 
-const Endorsement = () => {
-  const endorsements = [
+export interface IState {
+  recommendation: {
+    name: string;
+    body: string;
+    position: string;
+  };
+}
+
+const Recommendation = () => {
+  const [recommendations, setRecommendations] = React.useState<
+    IState["recommendation"][]
+  >([
     {
       body: `Ejiro is highly skilled, detail oriented Front-end Engineer. As a Full stack developer, I learnt a lot about accessibility and user experience on the Front End from Ejiro. He has always been an advocate for accessibility. Ejiro is your go to guy if you need someone to build a scalable Front End application with Engineering best practices in mind.`,
       name: "Faithful Ojebiyi",
@@ -44,13 +54,14 @@ He has great knowledge of front-end development, he delivered complex stories wi
       name: "Rebecca Udom",
       position: "Project Management",
     },
-  ];
+  ]);
+
   return (
     <section className="container-mb ">
       <div className="md:mb-[40px] mb-[25px] items-start tech-container container-space contain-main">
         <h1 className="stroke-heading  md:w-1/2">
           <span className="stroke-text stroke">04.</span>
-          <span className="md:text-[60px] text-[40px]">Endorsement</span>
+          <span className="md:text-[60px] text-[40px]">Recommendation</span>
         </h1>
       </div>
       <div className="container-space">
@@ -58,9 +69,9 @@ He has great knowledge of front-end development, he delivered complex stories wi
       </div>
       <section className="md:mt-[60px] mt-[30px]">
         <Marquee pauseOnHover={true} gradient={false} speed={50}>
-          {endorsements.map((endorsement) => (
-            <div className="md:mr-[30px] mr-[10px]" key={endorsement.body}>
-              <EndorsementCard endorsement={endorsement} />
+          {recommendations.map((recommendation) => (
+            <div className="md:mr-[30px] mr-[10px]" key={recommendation.body}>
+              <RecommendationCard recommendation={recommendation} />
             </div>
           ))}
         </Marquee>
@@ -69,4 +80,4 @@ He has great knowledge of front-end development, he delivered complex stories wi
   );
 };
 
-export default Endorsement;
+export default Recommendation;

@@ -12,7 +12,7 @@ import socials from "../data/social.json";
 import TextHoriz from "../components/shared/TextHoriz";
 import TechStack from "../components/home/TechStack";
 import Experience from "../components/home/Experience";
-import Endorsement from "../components/home/endorsement/Endorsement";
+import Recommendation from "../components/home/recommendation/Recommendation";
 import Work from "../components/home/work/Work";
 import Quote from "../components/home/Quote";
 
@@ -129,7 +129,7 @@ const Home: NextPage = () => {
         <TextHoriz />
         <TechStack />
         <Experience />
-        <Endorsement />
+        <Recommendation />
         <Work />
         <Quote />
         <div className="md:container-space container-mb ">
