@@ -61,7 +61,7 @@ He has great knowledge of front-end development, he delivered complex stories wi
       <div className="md:mb-[40px] mb-[25px] items-start tech-container container-space contain-main">
         <h1 className="stroke-heading  md:w-1/2">
           <span className="stroke-text stroke">04.</span>
-          <span className="md:text-[60px] text-[40px]">Recommendation</span>
+          <span className="md:text-[60px] text-[40px]">Endorsement</span>
         </h1>
       </div>
       <div className="container-space">

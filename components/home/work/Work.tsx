@@ -1,9 +1,19 @@
-import React from "react";
+import { useState } from "react";
 import LineHoriz from "../../shared/LineHoriz";
 import WorkCard from "./WorkCard";
 
-export default function work() {
-  const items = [
+export interface IState {
+  niche: {
+    title: string;
+    lead: string;
+    link: string;
+    linkText: string;
+    isWork: boolean;
+  };
+}
+
+const Work = () => {
+  const [niche, _] = useState<IState["niche"][]>([
     {
       title: "I build cool & amazing stuffs for the internet",
       lead: " Open source projects, web apps, mobile app and experimentals.",
@@ -18,7 +28,23 @@ export default function work() {
       linkText: "Read my articles",
       isWork: false,
     },
-  ];
+  ]);
+
+  const customCard = () => {
+    return (
+      <div className="mt-[60px] lg:h-[550px] flex items-center md:flex-row flex-col">
+        {niche.map((nich) => (
+          <div
+            className=" md:mr-[20px] h-full md:mb-0 md:odd:mb-0 odd:mb-[30px] w-full min-h-full md:p-[0.5em]"
+            key={nich.title}
+          >
+            <WorkCard niche={nich} />
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <section className="container-mb container-space contain-main">
       <div className="md:mb-[40px] mb-[25px] items-start tech-container">
@@ -28,16 +54,9 @@ export default function work() {
         </h1>
       </div>
       <LineHoriz />
-      <div className="mt-[60px] lg:h-[550px] flex items-center md:flex-row flex-col">
-        {items.map((item) => (
-          <div
-            className=" md:mr-[20px] h-full md:mb-0 md:odd:mb-0 odd:mb-[30px] w-full min-h-full md:p-[0.5em]"
-            key={item.title}
-          >
-            <WorkCard work={item} />
-          </div>
-        ))}
-      </div>
+      {customCard()}
     </section>
   );
-}
+};
+
+export default Work;

@@ -1,21 +1,23 @@
 import Link from "next/link";
 import React from "react";
-            // @ts-ignore
+import { IState as IProps } from "./Work";
 
-export default function WorkCard({ work }) {
+export default function WorkCard({ niche }: IProps) {
   return (
     <section className="relative bg-[#FBFBFB] xl:px-[100px] xl:py-[100px] py-[50px] px-[44px] ">
       <h1 className="mb-[12px] md:text-[36px] font-bold text-[24px] leading-[24px] md:leading-[44px] ">
-        {work.title}
+        {niche.title}
       </h1>
       <p className="text-[14px] xl:text-[22px] xl:mb-[60px] mb-[40px] ">
-        {work.lead}
+        {niche.lead}
       </p>
       <div className="text-left mt-[50px] xl:mt-[120px] lg:mt-[80px] ">
-        <Link href={work.link}>
-          <a className="btn10 hover-main md:h-auto h-[63px]  group border border-solid border-gray2 text-white bg-dark hover:text-dark 
-          hover:bg-white inline-flex items-center justify-center MD:font-bold  font-semibold text-[14px] w-full md:text-[19px] py-[28px] md:w-[305px] mx-auto">
-            <span className="mr-[12px]">{work.linkText}</span>
+        <Link href={niche.link}>
+          <a
+            className="btn10 hover-main md:h-auto h-[63px]  group border border-solid border-gray2 text-white bg-dark hover:text-dark 
+          hover:bg-white inline-flex items-center justify-center MD:font-bold  font-semibold text-[14px] w-full md:text-[19px] py-[28px] md:w-[305px] mx-auto"
+          >
+            <span className="mr-[12px]">{niche.linkText}</span>
             <span>
               <svg
                 width="11"
@@ -37,7 +39,7 @@ export default function WorkCard({ work }) {
         </Link>
       </div>
       <span className="absolute md:top-[53px] md:right-[58px] top-[120px]  right-[28px] ">
-        {work.isWork ? (
+        {niche.isWork ? (
           <svg
             className="w-[13px] md:full"
             width="22"
