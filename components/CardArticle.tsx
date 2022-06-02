@@ -1,6 +1,7 @@
 import { Article } from "../types/interface";
 import ArrowUp from "./shared/ArrowUp";
 import React from "react";
+import Image from "next/image";
 
 interface ArticleProps {
   article: Article;
@@ -38,8 +39,7 @@ const CardArticle: React.FC<ArticleProps> = ({ article }) => {
               </p>
             </div>
           </article>
-          {/* </a> */}
-          {/* <a href={article.url} title={article.title}> */}
+
           <article className="flex items-center justify-between text-gray3 text-[26px] md:pt-[40px]  pt-[17px]  md:px-[80px]  px-[30px] pb-">
             <div className="flex items-center text-[10px] md:text-[20px] ">
               <time
@@ -52,10 +52,12 @@ const CardArticle: React.FC<ArticleProps> = ({ article }) => {
                 {article.duration}
               </p>
 
-              <img
+              <Image
                 src={article.image}
                 alt={article.publisher}
                 className="md:w-[110px] w-[56px]"
+                width={120}
+                height={30}
               />
             </div>
             <div className="md:w-[15px] w-[8px] ">

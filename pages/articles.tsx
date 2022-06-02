@@ -47,10 +47,6 @@ const Article = ({
           </p>
         </div>
       </header>
-      {/* {{ people }}
-      {article.map((person) => (
-        <p key={person.title}>{person.title}</p>
-      ))} */}
 
       <main className=" lg:px-[120px] px-[18px] md:pt-[160px] pt-[45px]">
         <section>
