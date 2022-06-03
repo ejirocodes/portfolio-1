@@ -99,6 +99,9 @@ const Home: NextPage = () => {
                 media="(min-width: 20em)"
               />
               <img
+                style={{ maxInlineSize: "100%" }}
+                width="526"
+                height="621"
                 src="https://res.cloudinary.com/ejiro/image/upload/v1654204394/portfolio-site/ejiro-asiuwhu_kemvml.webp"
                 loading="lazy"
                 alt="Ejiro Asiuwhu"
