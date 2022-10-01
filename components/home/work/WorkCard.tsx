@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+// import { Text } from "../../shared/Text";
 import { IState as IProps } from "./Work";
 
 export default function WorkCard({ niche }: IProps) {
@@ -8,6 +9,9 @@ export default function WorkCard({ niche }: IProps) {
       <h1 className="mb-[12px] md:text-[36px] font-bold text-[24px] leading-[24px] md:leading-[44px] ">
         {niche.title}
       </h1>
+      {/* <Text aria-atomic as="p">
+        Jobina
+      </Text> */}
       <p className="text-[14px] xl:text-[22px] xl:mb-[60px] mb-[40px] ">
         {niche.lead}
       </p>

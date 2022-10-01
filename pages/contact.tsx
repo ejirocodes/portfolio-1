@@ -12,40 +12,45 @@ export default function Contact() {
           something? Feel free to reach out.
         </p>
       </div>
-      <form className="flex justify-between" autoComplete="off">
+      <form
+        className="flex md:flex-row flex-col justify-between gap-36"
+        autoComplete="off"
+      >
         <input type="hidden" name="_subject" value="Message from ejiro.dev" />
-        <div className="flex flex-col ">
-          <div className="flex flex-col lg:mb-[62px] md:mb-[42px] mb-[25px]  ">
-            <label htmlFor="fullname " className="mb-[30px]">
-              Full Name
-            </label>
-            <input
-              required
-              autoComplete="false"
-              type="text"
-              name="fullname"
-              id="fullname"
-              placeholder="Enter your full name"
-              className="border-b border-gray-200 pb-5 focus-visible:border-b focus-visible:border-dark focus-visible:border-solid active:border-dark active:border-b transition-colors "
-            />
-          </div>
-          <div className="flex flex-col lg:mb-24">
-            <label htmlFor="email" className="mb-[30px]">
-              Email address
-            </label>
-            <input
-              required
-              autoComplete="false"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter your email address"
-              className="border-b border-gray-200 pb-5 focus-visible:border-b focus-visible:border-dark focus-visible:border-solid active:border-dark active:border-b transition-colors "
-            />
+        <div className="flex flex-col md:w-2/4 w-full ">
+          <div className="flex flex-col w-full">
+            <div className="flex flex-col lg:mb-[62px] md:mb-[42px] mb-[25px]  ">
+              <label htmlFor="fullname " className="mb-[30px]">
+                Full Name
+              </label>
+              <input
+                required
+                autoComplete="false"
+                type="text"
+                name="fullname"
+                id="fullname"
+                placeholder="Enter your full name"
+                className="border-b border-gray-200 pb-5 focus-visible:border-b focus-visible:border-dark focus-visible:border-solid active:border-dark active:border-b transition-colors "
+              />
+            </div>
+            <div className="flex flex-col lg:mb-24 w-full">
+              <label htmlFor="email" className="mb-[30px]">
+                Email address
+              </label>
+              <input
+                required
+                autoComplete="false"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email address"
+                className="border-b border-gray-200 pb-5 focus-visible:border-b focus-visible:border-dark focus-visible:border-solid active:border-dark active:border-b transition-colors "
+              />
+            </div>
           </div>
           <button
             className="btn10 hover-main md:h-auto h-[63px] group border border-solid border-gray2 text-white bg-dark hover:text-dark 
-          hover:bg-white inline-flex items-center justify-center MD:font-bold  font-semibold text-[14px] w-full md:text-[19px] py-[28px] md:w-[305px] mx-auto"
+          hover:bg-white inline-flex items-center justify-center MD:font-bold  font-semibold text-[14px] w-full md:text-[19px] py-[28px] md:w-[305px]"
           >
             <span className="mr-[12px]">Send message</span>
             <span>
@@ -67,13 +72,13 @@ export default function Contact() {
             </span>
           </button>
         </div>
-        <div className="flex flex-col ">
+        <div className="flex flex-col md:w-2/4 w-full">
           <label htmlFor="message" className="mb-[30px]">
             Messages
           </label>
           <textarea
             required
-            className="leading-[35px] border-b border-gray-200 pb-5 focus-visible:border-b focus-visible:border-dark focus-visible:border-solid active:border-dark active:border-b transition-colors "
+            className="leading-[35px] resize-none border-b border-gray-200 pb-8 focus-visible:border-b focus-visible:border-dark focus-visible:border-solid active:border-dark active:border-b transition-colors "
             name="message"
             id="message"
             cols={50}

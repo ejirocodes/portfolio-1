@@ -8,7 +8,7 @@ import { gsap } from "gsap/dist/gsap";
 import { Cursor } from "../animation/cursor";
 import useScroll from "../hooks/useScroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-import socials from "../data/social.json";
+import Social from "../data/social.json";
 import TextHoriz from "../components/shared/TextHoriz";
 import TechStack from "../components/home/TechStack";
 import Experience from "../components/home/Experience";
@@ -21,7 +21,7 @@ import dynamic from "next/dynamic";
 const About = dynamic(() => import("../components/home/About"));
 const Newsletter = dynamic(() => import("../components/article/Newsletter"));
 
-const Home: NextPage = () => {
+const Home = ({ socials }: { socials: typeof Social }) => {
   return (
     <div>
       <Head>
@@ -54,10 +54,9 @@ const Home: NextPage = () => {
               <br className="sm:hidden 2xl:inline xl:inline lg:inline md:inline" />
               Engineer.
             </h1>
-            <p className="xl:mb-[90px] lg:mb-[50px]  mb-[40px] w-full max-w-[538px] lg:text-[18px] xl:text-[22px] text-[14px] leading-[24px] md:leading-[40px]">
-              Hello, Ejiro Asiuwhu here. I focused on developing premium web
-              experiences through the lens of design thinking, web performance,
-              accessibility, interaction{" "}
+            <p className="xl:mb-[60px] lg:mb-[30px]  mb-[20px] w-full max-w-[538px] lg:text-[18px] xl:text-[22px] text-[14px] leading-[24px] md:leading-[40px]">
+              Hello, Ejiro Asiuwhu here. I&apos;m a Software Engineer with a
+              drive for building highly scalable and performant web applications
             </p>
             <a
               href=""
@@ -85,7 +84,7 @@ const Home: NextPage = () => {
             </a>
           </div>
 
-          <div className="w-full md:w-auto ml-0 2xl:ml-[50px]  2xl:w-auto  flex justify-end items-center flex-col">
+          <div className="w-full md:w-auto ml-0 2xl:ml-[50px]  2xl:w-auto  flex justify-end items-center flex-col ">
             <picture>
               {/* Large */}
               <source
@@ -111,7 +110,7 @@ const Home: NextPage = () => {
               />
             </picture>
 
-            <ul className="flex items-center">
+            <ul className="flex items-center mt-10">
               {socials.map((social) => (
                 <li key={social.title}>
                   <a
@@ -119,7 +118,7 @@ const Home: NextPage = () => {
                     aria-label={social.arialLabel}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="md:mr-[46px] mr-[23px] md:text-[26px] text-[14px] text-gray2 font-extrabold"
+                    className="md:mr-[46px] mr-[23px] md:text-[26px] text-[14px] text-gray2 transition-all hover:text-black font-extrabold"
                   >
                     {social.title}
                   </a>
@@ -142,5 +141,16 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const res = await fetch("http://localhost:5100/api/social");
+  const socials = await res.json();
+
+  return {
+    props: {
+      socials,
+    },
+  };
+}
 
 export default Home;

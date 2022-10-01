@@ -2,7 +2,7 @@ import LineHoriz from "../shared/LineHoriz";
 
 export default function About() {
   return (
-    <section className="container-space md:my-[150px] my-[100px] contain-main">
+    <section className="container-space md:my-[150px] my-20 contain-main">
       <div className="md:mb-[40px] mb-[25px]">
         <h1 className="stroke-heading">
           <span className="stroke-text stroke">01.</span>
