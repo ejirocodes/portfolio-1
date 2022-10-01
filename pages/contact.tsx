@@ -13,7 +13,7 @@ export default function Contact() {
         </p>
       </div>
       <form
-        className="flex md:flex-row flex-col justify-between gap-36"
+        className="flex md:flex-row flex-col md:justify-between md:gap-36 gap-8"
         autoComplete="off"
       >
         <input type="hidden" name="_subject" value="Message from ejiro.dev" />

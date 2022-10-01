@@ -143,7 +143,7 @@ const Home = ({ socials }: { socials: typeof Social }) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:5100/api/social");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_HOST!}/api/social`);
   const socials = await res.json();
 
   return {
