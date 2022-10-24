@@ -8,7 +8,7 @@ import { gsap } from "gsap/dist/gsap";
 import { Cursor } from "../animation/cursor";
 import useScroll from "../hooks/useScroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-import Social from "../data/social.json";
+import socials from "../data/social.json";
 import TextHoriz from "../components/shared/TextHoriz";
 import TechStack from "../components/home/TechStack";
 import Experience from "../components/home/Experience";
@@ -21,7 +21,7 @@ import dynamic from "next/dynamic";
 const About = dynamic(() => import("../components/home/About"));
 const Newsletter = dynamic(() => import("../components/article/Newsletter"));
 
-const Home = ({ socials }: { socials: typeof Social }) => {
+const Home = () => {
   return (
     <div>
       <Head>
@@ -110,7 +110,7 @@ const Home = ({ socials }: { socials: typeof Social }) => {
               />
             </picture>
 
-            <ul className="flex items-center mt-10">
+            <ul className="flex items-center sm:mt-6 mt-3">
               {socials.map((social) => (
                 <li key={social.title}>
                   <a
@@ -142,15 +142,15 @@ const Home = ({ socials }: { socials: typeof Social }) => {
   );
 };
 
-export async function getStaticProps() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_HOST!}/api/social`);
-  const socials = await res.json();
+// export async function getStaticProps() {
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_HOST!}/api/social`);
+//   const socials = await res.json();
 
-  return {
-    props: {
-      socials,
-    },
-  };
-}
+//   return {
+//     props: {
+//       socials,
+//     },
+//   };
+// }
 
 export default Home;
