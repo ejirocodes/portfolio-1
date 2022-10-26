@@ -46,7 +46,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="md:pt-[137px] pt-[60px] w-full">
+      <main className="md:pt-24 pt-10 w-full">
         <section className="flex lg:items-center huge:justify-center lg:justify-between  !items-center md:flex-row flex-col w-full container-space">
           <div className="w-full md:w-1/2  2xl:w-auto mr-0 2xl:mr-[50px] md:mr-[30px] md:mb-0 mb-[60px]">
             <h1 className="font-extrabold font-['NeueMachina'] leading-none xl:text-[110px] lg:text-[80px] md:text-[68px] sm:text-[50px] text-[42px] mb-[20px]">

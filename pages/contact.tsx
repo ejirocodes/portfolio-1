@@ -78,7 +78,7 @@ export default function Contact() {
           </label>
           <textarea
             required
-            className="leading-[35px] resize-none border-b border-gray-200 pb-8 focus-visible:border-b focus-visible:border-dark focus-visible:border-solid active:border-dark active:border-b transition-colors "
+            className="leading-[35px] resize-none border-b sm:placeholder:text-lg border-gray-200 pb-8 focus-visible:border-b focus-visible:border-dark focus-visible:border-solid active:border-dark active:border-b transition-colors placeholder:text-sm"
             name="message"
             id="message"
             cols={50}

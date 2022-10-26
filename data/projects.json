@@ -1,4 +1,4 @@
- [
+[
   {
     "id": 1,
     "title": "Spasora",
@@ -57,7 +57,7 @@
     "title": "Ejiro Code",
     "logo": "/img/ejiro.svg",
     "details": "Frontend focused engineer with a passion for developing premium web experiences through the lens of design thinking, web performance, accessibility, interaction",
-    "url": [{ "type": "web", "link": "https://ejiro.dev/" }],
+    "url": [{ "type": "web", "link": "/" }],
     "type": "project"
   },
   {
@@ -76,7 +76,10 @@
     "logo": "/img/npm.svg",
     "details": "Touch ripple component for @vuejs 3.x.",
     "url": [
-      { "type": "web", "link": "https://www.npmjs.com/package/vue3-touch-ripple" }
+      {
+        "type": "web",
+        "link": "https://www.npmjs.com/package/vue3-touch-ripple"
+      }
     ],
     "type": "open"
   }
