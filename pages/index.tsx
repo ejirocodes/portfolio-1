@@ -30,19 +30,19 @@ const Home = () => {
       left: 0,
       behavior: "smooth",
     });
-    // window.scrollTo(0, workSectionRef?.current?.offsetTop! - 120);
   };
 
   return (
     <div>
       <Head>
         <title>
-          Ejiro Asiuwhu - Frontend Engineer, JavaScript Developer and Technical
-          Writer.
+          Ejiro Asiuwhu - Product Engineer, Frontend Engineer JavaScript
+          Developer and Technical Writer.
         </title>
         <meta
           name="description"
-          content="Ejiro Asiuwhu is a Frontend Engineer and JavaScript developer highly skilled in building complex interactive applications with JavaScript and TypeScript, scalable design patterns, advanced web components architectures and progressively enhanced web applications."
+          content="Ejiro Asiuwhu is a  a product-focused Software
+              Engineer with a drive for building meaningful products that people love using."
         />
         <meta name="twitter:card" content="summary" />
         <meta

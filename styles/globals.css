@@ -65,7 +65,7 @@
     @apply group-hover:translate-x-2 transition-all duration-300 ease-[cubic-bezier(.32,2,.55,.27)];
   }
   .container-space {
-    @apply lg:px-[120px] px-[56px];
+    @apply lg:px-[120px] md:px-[56px] px-6;
   }
   .marque-title {
     @apply md:ml-[32px] ml-[12px] whitespace-nowrap overflow-hidden;

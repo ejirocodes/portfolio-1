@@ -1,6 +1,6 @@
 const Newsletter = () => {
   return (
-    <section className="bg-[#FBFBFB] text-center md:px-[180px] px-[58px] md:pt-[105px] pt-[43px] pb-[48px] md:pb-[121px] contain-main">
+    <section className="bg-[#FBFBFB] text-center lg:px-[180px] md:px-[58px] px-6 lg:pt-[105px] md:pt-[43px] p-6 pb:pb-[48px] lg:pb-[121px] contain-main">
       <h1 className="md:mb-[19px] mb-[6px] leading-[20px] text-dark lg:text-[42px] md:text-[38px] sm:text-[20px] text-[18px]  md:leading-[48px] font-bold ">
         Ejiro Asiuhwu&apos;s Newsletter
       </h1>
