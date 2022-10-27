@@ -49,7 +49,7 @@
     @apply relative overflow-hidden transition-all ease-in-out z-10 duration-300 hover:border hover:border-solid hover:border-dark hover:text-dark;
   }
   .project-card {
-    @apply grid grid-cols-3 gap-4 py-[120px] px-[96px] bg-[#F7F7F7];
+    @apply grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 sm:gap-4 gap-6 xl:py-[120px] xl:px-[96px] lg:p-10  p-6 bg-[#F7F7F7];
   }
   input,
   textarea {
@@ -173,8 +173,15 @@
 .react-tabs__tab--selected {
   color: var(--primary) !important;
 }
-.react-tabs__tab:not(:nth-last-of-type(1)) {
-  margin-right: 180px !important;
+.tabs_main_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .react-tabs__tab:not(:nth-last-of-type(1)) {
+    margin-right: 180px !important;
+  }
 }
 
 /* .gallery {

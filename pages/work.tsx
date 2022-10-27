@@ -227,9 +227,9 @@ const Work = () => {
             </div>
 
             <TabPanel>
-              <div className="project-card">
+              <div className="project-card ">
                 {projects.map((project) => (
-                  <div key={project.details} className="mr-[20px]">
+                  <div key={project.details} className="">
                     <ProjectCard project={project} />
                   </div>
                 ))}
