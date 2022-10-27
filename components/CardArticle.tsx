@@ -55,7 +55,7 @@ const CardArticle: React.FC<ArticleProps> = ({ article }) => {
               <Image
                 src={article.image}
                 alt={article.publisher}
-                className="md:w-[110px] w-[56px]"
+                className="md:w-[110px] !w-16 !h-16 !max-w-[none] !max-h-[none] !min-w-[auto] !min-h-[auto]"
                 width={120}
                 height={30}
               />

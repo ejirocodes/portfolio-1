@@ -66,8 +66,9 @@ const Home = () => {
               Engineer.
             </h1>
             <p className="xl:mb-[60px] lg:mb-[30px]  mb-[20px] w-full max-w-[538px] lg:text-[18px] xl:text-[22px] text-[14px] leading-[24px] md:leading-[40px]">
-              Hello, Ejiro Asiuwhu here. I&apos;m a Software Engineer with a
-              drive for building highly scalable and performant web applications
+              Hello, Ejiro Asiuwhu here. I&apos;m a product-focused Software
+              Engineer with a drive for building meaningful products that people
+              love using
             </p>
             <button
               onClick={executeScroll}

@@ -5,7 +5,7 @@ import { IState as IProps } from "./Work";
 
 export default function WorkCard({ niche }: IProps) {
   return (
-    <section className="relative bg-[#FBFBFB] xl:px-[100px] xl:py-[100px] py-[50px] px-[44px] ">
+    <section className="relative bg-[#FBFBFB] xl:p-24 md:p-8 sm:first:mb-0 first:mb-8 ">
       <h1 className="mb-[12px] md:text-[36px] font-bold text-[24px] leading-[24px] md:leading-[44px] ">
         {niche.title}
       </h1>

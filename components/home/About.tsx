@@ -21,25 +21,25 @@ export default function About() {
       "
       >
         <p>
-          I&apos;ve built products for companies and businesses around the globe
-          ranging from marketing websites to complex solutions and enterprise
-          apps with focus on fast, elegant and accessible user experiences.
+          Software Engineer with a drive for building highly scalable and
+          performant web applications. Heavily interested in module federation,
+          micro frontends, state machines, TDD, and system designs.
         </p>
         <p>
-          Before now, I was Principal Frontend Engineer at hellotax, where I
-          worked on a suite of tools and services tailored at providing fast,
-          automated VAT Registration / filings and Returns solutions for
-          multi-channel sellers across Europe.
+          Big on web performance and optimization, advanced component design
+          patterns, A11y, SSR, and state management. Expert at crafting highly
+          reusable Typescript-heavy component libraries. An advocate of
+          TypeScript and industry best practices
         </p>
         <p>
-          I&apos;ve built products for companies and businesses around the globe
-          ranging from marketing websites to complex solutions and enterprise
-          apps with focus on fast, elegant and accessible user experiences.
+          <strong>Core</strong>: TypeScript, JavaScript (React, Vue & Node.js{" "}
+          <br /> Technologies and Languages used professionally: JavaScript,
+          Typescript, GraphQL, React, Vue, Node, Redux
         </p>
         <p>
-          I&apos;ve built products for companies and businesses around the globe
-          ranging from marketing websites to complex solutions and enterprise
-          apps with focus on fast, elegant and accessible user experiences.{" "}
+          Zustand, Vuex / Pinia, GraphQL, Next.js, NuxtJS, Tailwind CSS,
+          Express, Nestjs, MongoDB, Vitest, Jest, Ionic / Capacitor, Firebase,
+          AWS, Heroku, Netlify
         </p>
       </section>
     </section>

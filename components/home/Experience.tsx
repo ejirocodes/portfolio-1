@@ -128,7 +128,6 @@ export default function Experience() {
         </div>
         <div className="md:text-center text-left mt-[50px] md:mt-[120px] ">
           <a
-            href="https://standardresume.co/r/cah3IaEMPrit0JuZ0CIL5"
             target="_blank"
             rel="noopener noreferrer"
             className=" btn10 hover-main group border border-solid border-gray2 text-white bg-dark md:px-[50px] hover:text-dark hover:bg-white inline-flex items-center 

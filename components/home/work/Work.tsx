@@ -15,15 +15,15 @@ export interface IState {
 const Work = forwardRef((props, ref) => {
   const [niche, _] = useState<IState["niche"][]>([
     {
-      title: "I build cool & amazing stuffs for the internet",
+      title: "I build amazing stuff for the internet",
       lead: " Open source projects, web apps, mobile app and experimentals.",
       link: "/work",
       linkText: "See my work",
       isWork: true,
     },
     {
-      title: "I author meaningful content regularly",
-      lead: "I write about Software Development, Tech, Career Tips, and Lifestyle.",
+      title: "I author meaningful content, regularly",
+      lead: "I write about Software, Tech, Career Tips, and Lifestyle.",
       link: "/articles",
       linkText: "Read my articles",
       isWork: false,
@@ -46,6 +46,7 @@ const Work = forwardRef((props, ref) => {
   };
 
   return (
+    // @ts-ignore
     <section ref={ref} className="container-mb container-space contain-main">
       <div className="md:mb-[40px] mb-[25px] items-start tech-container">
         <h1 className="stroke-heading">
