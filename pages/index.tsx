@@ -70,15 +70,15 @@ const Home = () => {
             </p>
             <button
               onClick={executeScroll}
-              className="font-bold flex group xl:text-[24px] lg:text-[18px] text-[12px]  items-center "
+              className="font-bold flex group xl:text-2xl lg:text-lg text-sm  items-center "
             >
-              <span className="inline-flex mr-[17px] icon-hover md:after:h-[2px]  after:h-[1px] md:after:bottom-[0]  after:bottom-[1px]  link-hover">
+              <span className="inline-flex sm:mr-4 mr-3 icon-hover md:after:h-[2px]  after:h-[1px] md:after:bottom-[0]  after:bottom-[1px]  link-hover">
                 What brought you to Code Lord?
               </span>
               <span className=" icon-hover">
                 <svg
                   width="16"
-                  height="17"
+                  height="16"
                   viewBox="0 0 16 17"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
