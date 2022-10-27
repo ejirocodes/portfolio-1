@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:site_name" content="Ejiro Asiuwhu" />
         <meta property="og:url" content="https://ejiro.dev" />
         <meta name="theme-color" content="#111111" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
 
         {/* Twitter   */}
         <meta name="twitter:card" content="summary_large_image" />

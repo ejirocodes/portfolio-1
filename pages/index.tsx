@@ -52,7 +52,7 @@ const Home = () => {
         <meta property="og:site_name" content="Ejiro Asiuwhu" />
         <meta property="og:url" content="https://ejiro.dev" />
         <meta name="theme-color" content="#111111" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className="md:pt-24 pt-10 w-full">
