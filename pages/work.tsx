@@ -205,15 +205,15 @@ const Work = () => {
           Work | Ejiro Asiuwhu | Products and Software I&apos;ve built
         </title>
       </Head>
-      <section className="pt-[172px]">
-        <header className="text-center text-dark pb-[48px] ">
-          <h1 className="text-[60px] leading-none mb-[12px] font-extrabold">
+      <section className="lg:pt-[172px] pt-12">
+        <header className="text-center text-dark pb-[48px]  px-6">
+          <h1 className="sm:text-[60px] text-5xl leading-none mb-[12px] font-extrabold">
             /Work
           </h1>
-          <p className="text-[22px]">
+          <p className="sm:text-[22px]">
             I have written over a billion lines of code... just kidding,
-            <br /> But trust me, I&apos;ve built awesome products that I
-            can&apos;t show you 👀
+            <br className="sm:inline hidden" /> But trust me, I&apos;ve built
+            awesome products that I can&apos;t show you 👀
           </p>
         </header>
         <section>
@@ -255,11 +255,11 @@ const Work = () => {
               </div>
             </TabPanel>
           </Tabs>
-          <div className="flex items-center justify-center md:mt-[170px] ">
+          <div className="flex items-center justify-center xl:mt-[170px] md:20 mt-12 ">
             <Link href="/articles">
               <a className="inline-flex items-center group">
                 <span
-                  className="mr-[18px] text-[32px]  icon-hover  font-bold link-hover
+                  className="mr-[18px] sm:text-[32px] text-lg icon-hover  font-bold link-hover
               "
                 >
                   View my articles
@@ -284,7 +284,7 @@ const Work = () => {
             </Link>
           </div>
         </section>
-        <section className="md:mt-[210px] md:mx-[110px] md:mb-[110px]">
+        <section className="xl:mt-[210px] m-10 md:mx-[110px] md:mb-[110px]">
           <Newsletter />
         </section>
       </section>

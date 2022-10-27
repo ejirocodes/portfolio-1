@@ -165,7 +165,7 @@
   background: transparent !important;
   border-color: transparent !important;
   border-radius: 0 !important;
-  font-size: 27px !important;
+  font-size: 16px !important;
   font-weight: 800 !important;
   color: #cccccc !important;
   transition: all 0.3s ease-in-out;
@@ -178,7 +178,12 @@
   align-items: center;
   justify-content: center;
 }
+
 @media screen and (min-width: 768px) {
+  .react-tabs__tab,
+  .react-tabs__tab--selected {
+    font-size: 27px !important;
+  }
   .react-tabs__tab:not(:nth-last-of-type(1)) {
     margin-right: 180px !important;
   }

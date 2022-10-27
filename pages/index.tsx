@@ -144,7 +144,7 @@ const Home = () => {
         <Recommendation />
         <Work ref={workSectionRef} />
         <Quote />
-        <div className="md:container-space container-mb ">
+        <div className="md:container-space container-mb sm:mx-0 px-3">
           <Newsletter />
         </div>
       </main>

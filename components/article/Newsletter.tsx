@@ -1,6 +1,6 @@
 const Newsletter = () => {
   return (
-    <section className="bg-[#FBFBFB] text-center lg:px-[180px] md:px-[58px] px-6 lg:pt-[105px] md:pt-[43px] p-6 pb:pb-[48px] lg:pb-[121px] contain-main">
+    <section className="bg-[#FBFBFB] text-center lg:px-[180px] md:px-[58px] px-4 lg:pt-[105px] md:pt-[43px] p-6 pb:pb-[48px] lg:pb-[121px] contain-main">
       <h1 className="md:mb-[19px] mb-[6px] leading-[20px] text-dark lg:text-[42px] md:text-[38px] sm:text-[20px] text-[18px]  md:leading-[48px] font-bold ">
         Ejiro Asiuhwu&apos;s Newsletter
       </h1>
@@ -8,7 +8,7 @@ const Newsletter = () => {
         A monthly newsletter where I share resources around Tech, Career and
         Lifestyle. No spam, unsubscribe at any time.
       </p>
-      <form className="flex items-center justify-center md:h-[87px] h-[40px] md:mb-[60px] mb-[40px]">
+      <form className="flex items-center justify-center md:h-[87px] h-[40px] md:mb-[60px] mb-6">
         <input
           required
           type="email"
