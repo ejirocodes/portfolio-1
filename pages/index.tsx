@@ -2,7 +2,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { forwardRef, useEffect, useRef } from "react";
 import barba from "@barba/core";
 import { gsap } from "gsap/dist/gsap";
 import { Cursor } from "../animation/cursor";
@@ -22,6 +22,17 @@ const About = dynamic(() => import("../components/home/About"));
 const Newsletter = dynamic(() => import("../components/article/Newsletter"));
 
 const Home = () => {
+  const workSectionRef = useRef<HTMLDivElement | null>(null);
+
+  const executeScroll = () => {
+    window.scroll({
+      top: workSectionRef?.current?.offsetTop! - 120,
+      left: 0,
+      behavior: "smooth",
+    });
+    // window.scrollTo(0, workSectionRef?.current?.offsetTop! - 120);
+  };
+
   return (
     <div>
       <Head>
@@ -58,8 +69,8 @@ const Home = () => {
               Hello, Ejiro Asiuwhu here. I&apos;m a Software Engineer with a
               drive for building highly scalable and performant web applications
             </p>
-            <a
-              href=""
+            <button
+              onClick={executeScroll}
               className="font-bold flex group xl:text-[24px] lg:text-[18px] text-[12px]  items-center "
             >
               <span className="inline-flex mr-[17px] icon-hover md:after:h-[2px]  after:h-[1px] md:after:bottom-[0]  after:bottom-[1px]  link-hover">
@@ -81,7 +92,7 @@ const Home = () => {
                   />
                 </svg>
               </span>
-            </a>
+            </button>
           </div>
 
           <div className="w-full md:w-auto ml-0 2xl:ml-[50px]  2xl:w-auto  flex justify-end items-center flex-col ">
@@ -132,7 +143,7 @@ const Home = () => {
         <TechStack />
         <Experience />
         <Recommendation />
-        <Work />
+        <Work ref={workSectionRef} />
         <Quote />
         <div className="md:container-space container-mb ">
           <Newsletter />

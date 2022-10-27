@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import LineHoriz from "../../shared/LineHoriz";
 import WorkCard from "./WorkCard";
 
@@ -12,7 +12,7 @@ export interface IState {
   };
 }
 
-const Work = () => {
+const Work = forwardRef((props, ref) => {
   const [niche, _] = useState<IState["niche"][]>([
     {
       title: "I build cool & amazing stuffs for the internet",
@@ -46,7 +46,7 @@ const Work = () => {
   };
 
   return (
-    <section className="container-mb container-space contain-main">
+    <section ref={ref} className="container-mb container-space contain-main">
       <div className="md:mb-[40px] mb-[25px] items-start tech-container">
         <h1 className="stroke-heading">
           <span className="stroke-text stroke">05.</span>
@@ -57,6 +57,8 @@ const Work = () => {
       {customCard()}
     </section>
   );
-};
+});
+
+Work.displayName = "Work";
 
 export default Work;

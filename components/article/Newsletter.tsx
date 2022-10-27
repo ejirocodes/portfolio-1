@@ -37,8 +37,7 @@ const Newsletter = () => {
         </button>
       </form>
       <p className="text-gray5 md:text-[20px] text-[10px]">
-        By subscribing, you agree with Revue’s Terms of Service and Privacy
-        Policy.
+        By subscribing, you agree with :) Terms of Service and Privacy Policy.
       </p>
     </section>
   );
