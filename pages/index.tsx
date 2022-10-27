@@ -45,10 +45,7 @@ const Home = () => {
               Engineer with a drive for building meaningful products that people love using."
         />
         <meta name="twitter:card" content="summary" />
-        <meta
-          property="og:title"
-          content="Ejiro Asiuwhu: Software Engineer (Frontend)."
-        />
+        <meta property="og:title" content="Ejiro Asiuwhu: Software Engineer." />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Ejiro Asiuwhu" />
