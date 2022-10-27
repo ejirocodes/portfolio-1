@@ -12,7 +12,7 @@ export default function WorkCard({ niche }: IProps) {
       {/* <Text aria-atomic as="p">
         Jobina
       </Text> */}
-      <p className="text-[14px] xl:text-[22px] xl:mb-[60px] mb-[40px] ">
+      <p className="text-[14px] xl:text-[22px] xl:mb-[60px] mb-20">
         {niche.lead}
       </p>
       <div className="text-left mt-[50px] xl:mt-[120px] lg:mt-[80px] ">

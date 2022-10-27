@@ -32,12 +32,14 @@ export const Footer = () => {
           >
             Design with
             <a
-              className=" inline-flex md:w-[15px] w-[8px] mx-[6px] cursor-pointer"
+              className="sm:w-4 sm:h-4 h-2 w-2 inline-flex cursor-pointer sm:mx-2 mx-[4px]"
               href="https://www.linkedin.com/in/augustine-asiuwhu/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <svg
+                // width="10"
+                // height="10"
                 viewBox="0 0 18 17"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

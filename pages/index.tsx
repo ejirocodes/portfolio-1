@@ -59,7 +59,7 @@ const Home = () => {
         <section className="flex lg:items-center huge:justify-center lg:justify-between  !items-center md:flex-row flex-col w-full container-space">
           <div className="w-full md:w-1/2  2xl:w-auto mr-0 2xl:mr-[50px] md:mr-[30px] md:mb-0 mb-[60px]">
             <h1 className="font-extrabold font-['NeueMachina'] leading-none xl:text-[110px] lg:text-[80px] md:text-[68px] sm:text-[50px] text-[42px] mb-[20px]">
-              <span className="mr-[8px]">Frontend</span>
+              <span className="mr-[8px]">Software</span>
               <br className="sm:hidden 2xl:inline xl:inline lg:inline md:inline" />
               Engineer.
             </h1>
