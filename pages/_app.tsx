@@ -52,8 +52,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <meta
           property="og:title"
-          content="Ejiro Asiuwhu is a Product Engineer, Frontend Engineer JavaScript
-          Developer and Technical Writer."
+          content="Ejiro Asiuwhu is a product-focused Software
+              Engineer with a drive for building meaningful products that people
+              love using."
         />
         <meta name="author" property="og:author" content="Ejiro Asiuwhu" />
         <meta name="author" content="Ejiro Asiuwhu" />
