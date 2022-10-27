@@ -1,51 +1,71 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useContext, useEffect, useState, Fragment } from "react";
+import { useContext, useEffect, useState, Fragment, forwardRef } from "react";
 import Logo from "./Logo";
 import NavOpen from "./NavOpen";
 import { useNav, useNavUpdate } from "../../context/navContext";
 import socials from "../../data/social.json";
-import MobileNavOpen from "./MobileNavOpen";
 import { Dialog, Transition } from "@headlessui/react";
 
-export const NavMain = () => {
-  const navigations = [
-    {
-      title: "Home",
-      url: "/",
-    },
-    {
-      title: "Work",
-      url: "/work",
-    },
-    {
-      title: "Articles",
-      url: "/articles",
-    },
-    {
-      title: "Contact",
-      url: "/contact",
-    },
-  ];
+const navigations = [
+  {
+    title: "Home",
+    url: "/",
+  },
+  {
+    title: "Work",
+    url: "/work",
+  },
+  {
+    title: "Articles",
+    url: "/articles",
+  },
+  {
+    title: "Contact",
+    url: "/contact",
+  },
+];
 
-  const navigation2 = [
-    {
-      title: "Home",
-      url: "/",
-    },
-    {
-      title: "Work",
-      url: "/work",
-    },
-    {
-      title: "Résumé",
-      url: "/articles",
-    },
-    {
-      title: "Contact",
-      url: "/contact",
-    },
-  ];
+const navigation2 = [
+  {
+    title: "Home",
+    url: "/",
+  },
+  {
+    title: "Work",
+    url: "/work",
+  },
+  {
+    title: "Résumé",
+    url: "/articles",
+  },
+  {
+    title: "Contact",
+    url: "/contact",
+  },
+];
+
+type IProps = {
+  href: string;
+  children: React.ReactNode;
+  className: string;
+  onClick: () => void;
+};
+
+const MyLink = forwardRef((props: IProps, ref) => {
+  let { href, children, onClick, className, ...rest } = props;
+  return (
+    <Link href={href}>
+      <a {...rest} onClick={onClick} className={className}>
+        {children}
+      </a>
+    </Link>
+  );
+});
+
+MyLink.displayName = "MyLink";
+
+export const NavMain = () => {
   const router = useRouter();
 
   const [navStyle, setNavStyle] = useState(false);
@@ -120,27 +140,35 @@ export const NavMain = () => {
                     <section>
                       <div className="flex items-end justify-end p-7">
                         <button onClick={closeModal} title="Close navigation">
-                          <img src="/img/close.svg" alt="Close" />
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.98277 1.98268L21.9481 21.948M21.9481 1.98268L1.98277 21.948L21.9481 1.98268Z"
+                              stroke="#111111"
+                              strokeWidth="2"
+                              strokeLinecap="square"
+                            />
+                          </svg>
                         </button>
                       </div>
                       <div className="mt-[70px] pl-[48px]">
                         <ul className="flex flex-col justify-center h-full">
                           {navigations.map((navigation) => (
                             <li key={navigation.title} className="h-full">
-                              <Link href={navigation.url}>
-                                <a
-                                  onClick={() => {
-                                    // @ts-ignore
-
-                                    toggleNav(false);
-                                  }}
-                                  className={`text-gray2 font-extrabold leading-none text-[50px] mb-[20px] flex font-['NeueMachina'] transition ease-in-out duration-300 
+                              <MyLink
+                                className={`text-gray2 font-extrabold leading-none text-[50px] mb-[20px] flex font-['NeueMachina'] transition ease-in-out duration-300 
                     ${router.pathname === navigation.url && "!text-dark"}
                     `}
-                                >
-                                  {navigation.title}
-                                </a>
-                              </Link>
+                                href={navigation?.url}
+                                onClick={closeModal}
+                              >
+                                {navigation.title}
+                              </MyLink>
                             </li>
                           ))}
                         </ul>
@@ -172,7 +200,6 @@ export const NavMain = () => {
           </Dialog>
         </Transition>
       </>
-      {/* <MobileNavOpen /> */}
       {/* {isNav && <NavOpen />} */}
       <nav
         aria-label="Main menu"
