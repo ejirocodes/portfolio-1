@@ -13,30 +13,35 @@
   src: url("../assets/fonts/TomatoGrotesk-Regular.otf");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Tomato";
   src: url("../assets/fonts/TomatoGrotesk-Medium.otf");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Tomato";
   src: url("../assets/fonts/TomatoGrotesk-SemiBold.otf");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Tomato";
   src: url("../assets/fonts/TomatoGrotesk-ExtraBold.otf");
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "NeueMachina";
   src: url("../assets/fonts/NeueMachina-Ultrabold.otf");
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 @layer components {
   body {

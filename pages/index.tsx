@@ -128,7 +128,7 @@ const Home = () => {
                     aria-label={social.arialLabel}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="md:mr-[46px] mr-[23px] md:text-[26px] text-[14px] text-gray2 transition-all hover:text-black font-extrabold"
+                    className="md:mr-[46px] mr-[23px] md:text-[26px] text-[14px] text-black/50 transition-all duration-300 hover:text-black font-extrabold"
                   >
                     {social.title}
                   </a>

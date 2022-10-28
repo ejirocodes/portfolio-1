@@ -32,6 +32,7 @@ export const Footer = () => {
           >
             Design with
             <a
+              aria-label="Love"
               className="sm:w-4 sm:h-4 h-2 w-2 inline-flex cursor-pointer sm:mx-2 mx-[4px]"
               href="https://www.linkedin.com/in/augustine-asiuwhu/"
               target="_blank"

@@ -17,6 +17,7 @@ const Newsletter = () => {
         />
         <button
           type="submit"
+          aria-label="Sign up for newsletter"
           className="bg-dark h-full w-[68px]  md:w-[102px] group flex items-center justify-center focus:bg-dark active:bg-dark "
         >
           <svg
