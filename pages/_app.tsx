@@ -6,6 +6,7 @@ import { NavProvider } from "../context/navContext";
 import { gsap } from "gsap/dist/gsap";
 import CSSPlugin from "gsap/dist/CSSRulePlugin";
 import Head from "next/head";
+import Script from "next/script";
 
 gsap.registerPlugin(CSSPlugin);
 
@@ -90,6 +91,20 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <NavMain />
       <div className="md:mt-[100px] mt-[70px]">
+        {/* Global site tag (gtag.js) - Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-C6DEYB33WY"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-C6DEYB33WY');
+        `}
+        </Script>
         <Component {...pageProps} />
         <Footer />
       </div>
