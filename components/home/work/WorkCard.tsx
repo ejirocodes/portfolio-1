@@ -5,13 +5,10 @@ import { IState as IProps } from "./Work";
 
 export default function WorkCard({ niche }: IProps) {
   return (
-    <section className="relative bg-[#FBFBFB] xl:p-24 md:p-8 sm:first:mb-0 first:mb-8 ">
+    <section className="relative bg-[#FBFBFB] xl:p-24 md:p-8 p-4 sm:first:mb-0 first:mb-8 ">
       <h1 className="mb-[12px] md:text-[36px] font-bold text-[24px] leading-[24px] md:leading-[44px] ">
         {niche.title}
       </h1>
-      {/* <Text aria-atomic as="p">
-        Jobina
-      </Text> */}
       <p className="text-[14px] xl:text-[22px] xl:mb-[60px] mb-20">
         {niche.lead}
       </p>
